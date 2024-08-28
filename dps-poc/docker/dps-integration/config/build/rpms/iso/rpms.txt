@@ -1,0 +1,16 @@
+#################################
+# install common dependencies
+#################################
+
+ERICosstopmodel_CXP9031292
+ERICnetworkelementdefmodel_CXP9031290
+ERICgeolocationmodel_CXP9031964
+ERICdpsconfmodels_CXP9030872
+ERICmedcoreapichannelmodels_CXP9030899
+ERICmediationservicesmodel_CXP9031296
+
+#################################
+# FM SERVICE DEPENDENCIES
+#################################
+ERICalarmpersistencemodel_CXP9030634
+

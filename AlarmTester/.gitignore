@@ -1,0 +1,25 @@
+/.settings
+/.project
+/.classpath
+/target
+AlarmTester-api/target
+AlarmTester-ejb/target
+AlarmTester-ear/target
+AlarmTester-war/target
+AlarmTester-statistics/target
+.pmd
+AlarmTester-api/.project
+AlarmTester-ejb/.project
+AlarmTester-ear/.project
+AlarmTester-war/.project
+AlarmTester-statistics/.project
+AlarmTester-api/.settings/
+AlarmTester-ejb/.settings/
+AlarmTester-ear/.settings/
+AlarmTester-war/.settings/
+AlarmTester-statistics/.settings/
+#IntelliJ files
+.idea
+*.iml
+*.eml
+

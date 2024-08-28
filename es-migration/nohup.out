@@ -1,0 +1,1322 @@
+ INFO 2020-09-23 19:10:50,959 (MigrateInTwoSteps.java:70) [main] - Migration started at Wed Sep 23 19:10:50 CEST 2020
+ INFO 2020-09-23 19:10:51,786 (RangesCreator.java:72) [RangesCreator] - Getting collection1 statistics
+ INFO 2020-09-23 19:10:51,792 (SolrExporter.java:86) [SolrExporter#0] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:10:51,793 (SolrExporter.java:86) [SolrExporter#1] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:10:51,796 (SolrExporter.java:86) [SolrExporter#2] - Waiting for 3 seconds for time ranges...
+ with cmd: /usr/bin/curl http://localhost:8983/solr/collection1/select?q=*:*&stats=true&stats.field=insertTime&rows=0&indent=true -o /ericsson/postgres/migration/coreStats.xml :  INFO 2020-09-23 19:10:51,799 (SolrExporter.java:86) [SolrExporter#3] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:10:51,805 (SolrExporter.java:86) [SolrExporter#4] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:10:51,808 (SolrExporter.java:86) [SolrExporter#5] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:10:51,812 (SolrExporter.java:86) [SolrExporter#6] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:10:51,816 (SolrExporter.java:86) [SolrExporter#7] - Waiting for 3 seconds for time ranges...
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed INFO 2020-09-23 19:10:51,820 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:51,822 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:51,823 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:51,824 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:51,823 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:51,825 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:51,828 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   938    0   938    0     0  93800      0 --:--:-- --:--:-- --:--:-- 93800 INFO 2020-09-23 19:10:51,829 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+
+ INFO 2020-09-23 19:10:51,987 (RangesCreator.java:99) [RangesCreator] - Total number of records to migrate: 55070 , Min insertTime: Sun Aug 30 09:03:58 CEST 2020, Max insertTime: Mon Sep 21 16:12:00 CEST 2020
+ INFO 2020-09-23 19:10:51,997 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-08-30T09:03:58.099Z TO 2020-08-30T10:03:58.098Z
+ INFO 2020-09-23 19:10:52,471 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 17056 in 2020-09-03T12:03:58.099Z TO 2020-09-03T13:03:58.098Z
+ INFO 2020-09-23 19:10:52,845 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2736 in 2020-09-08T12:03:58.099Z TO 2020-09-08T13:03:58.098Z
+ INFO 2020-09-23 19:10:52,854 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 299 in 2020-09-08T13:03:58.099Z TO 2020-09-08T14:03:58.098Z
+ INFO 2020-09-23 19:10:52,859 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 39 in 2020-09-08T14:03:58.099Z TO 2020-09-08T15:03:58.098Z
+ INFO 2020-09-23 19:10:53,021 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 5 in 2020-09-10T12:03:58.099Z TO 2020-09-10T13:03:58.098Z
+ INFO 2020-09-23 19:10:53,025 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 120 in 2020-09-10T13:03:58.099Z TO 2020-09-10T14:03:58.098Z
+ INFO 2020-09-23 19:10:53,272 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 135 in 2020-09-15T09:03:58.099Z TO 2020-09-15T10:03:58.098Z
+ INFO 2020-09-23 19:10:53,278 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 195 in 2020-09-15T10:03:58.099Z TO 2020-09-15T11:03:58.098Z
+ INFO 2020-09-23 19:10:53,281 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 20 in 2020-09-15T11:03:58.099Z TO 2020-09-15T12:03:58.098Z
+ INFO 2020-09-23 19:10:53,285 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-15T12:03:58.099Z TO 2020-09-15T13:03:58.098Z
+ INFO 2020-09-23 19:10:53,461 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 16 in 2020-09-17T10:03:58.099Z TO 2020-09-17T11:03:58.098Z
+ INFO 2020-09-23 19:10:53,468 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 4 in 2020-09-17T13:03:58.099Z TO 2020-09-17T14:03:58.098Z
+ INFO 2020-09-23 19:10:53,480 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-17T16:03:58.099Z TO 2020-09-17T17:03:58.098Z
+ INFO 2020-09-23 19:10:53,488 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 51 in 2020-09-17T19:03:58.099Z TO 2020-09-17T20:03:58.098Z
+ INFO 2020-09-23 19:10:53,494 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 13 in 2020-09-17T21:03:58.099Z TO 2020-09-17T22:03:58.098Z
+ INFO 2020-09-23 19:10:53,529 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2 in 2020-09-18T02:03:58.099Z TO 2020-09-18T03:03:58.098Z
+ INFO 2020-09-23 19:10:53,550 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 10 in 2020-09-18T06:03:58.099Z TO 2020-09-18T07:03:58.098Z
+ INFO 2020-09-23 19:10:53,557 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 54 in 2020-09-18T08:03:58.099Z TO 2020-09-18T09:03:58.098Z
+ INFO 2020-09-23 19:10:53,567 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 819 in 2020-09-18T09:03:58.099Z TO 2020-09-18T10:03:58.098Z
+ INFO 2020-09-23 19:10:53,583 (RangesCreator.java:134) [RangesCreator] - 1800000 Num of numOfRecs 80 in 2020-09-18T10:03:58.099Z TO 2020-09-18T10:33:58.098Z
+ INFO 2020-09-23 19:10:53,616 (RangesCreator.java:134) [RangesCreator] - 180000 Num of numOfRecs 1220 in 2020-09-18T10:33:58.099Z TO 2020-09-18T10:36:58.098Z
+ INFO 2020-09-23 19:10:53,627 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 19815 in 2020-09-18T10:36:58.099Z TO 2020-09-18T11:36:58.098Z
+ INFO 2020-09-23 19:10:53,678 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 21 in 2020-09-19T03:36:58.099Z TO 2020-09-19T04:36:58.098Z
+ INFO 2020-09-23 19:10:53,705 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2 in 2020-09-19T15:36:58.099Z TO 2020-09-19T16:36:58.098Z
+ INFO 2020-09-23 19:10:53,709 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-19T16:36:58.099Z TO 2020-09-19T17:36:58.098Z
+ INFO 2020-09-23 19:10:53,721 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 4 in 2020-09-19T19:36:58.099Z TO 2020-09-19T20:36:58.098Z
+ INFO 2020-09-23 19:10:53,732 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 19 in 2020-09-20T03:36:58.099Z TO 2020-09-20T04:36:58.098Z
+ INFO 2020-09-23 19:10:53,763 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 20 in 2020-09-20T12:36:58.099Z TO 2020-09-20T13:36:58.098Z
+ INFO 2020-09-23 19:10:53,773 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 21 in 2020-09-20T17:36:58.099Z TO 2020-09-20T18:36:58.098Z
+ INFO 2020-09-23 19:10:53,777 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-20T19:36:58.099Z TO 2020-09-20T20:36:58.098Z
+ INFO 2020-09-23 19:10:53,779 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-20T20:36:58.099Z TO 2020-09-20T21:36:58.098Z
+ INFO 2020-09-23 19:10:53,800 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-21T07:36:58.099Z TO 2020-09-21T08:36:58.098Z
+ INFO 2020-09-23 19:10:53,812 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 6580 in 2020-09-21T11:36:58.099Z TO 2020-09-21T12:36:58.098Z
+ INFO 2020-09-23 19:10:53,822 (RangesCreator.java:134) [RangesCreator] - 1800000 Num of numOfRecs 5 in 2020-09-21T15:36:58.099Z TO 2020-09-21T16:06:58.098Z
+ INFO 2020-09-23 19:10:53,826 (RangesCreator.java:134) [RangesCreator] - 180000 Num of numOfRecs 962 in 2020-09-21T16:06:58.099Z TO 2020-09-21T16:09:58.098Z
+ INFO 2020-09-23 19:10:53,830 (RangesCreator.java:134) [RangesCreator] - 60000 Num of numOfRecs 2872 in 2020-09-21T16:09:58.099Z TO 2020-09-21T16:10:58.098Z
+ INFO 2020-09-23 19:10:53,836 (RangesCreator.java:134) [RangesCreator] - 60000 Num of numOfRecs 1865 in 2020-09-21T16:10:58.099Z TO 2020-09-21T16:11:58.098Z
+ INFO 2020-09-23 19:10:53,842 (RangesCreator.java:134) [RangesCreator] - 1000 Num of numOfRecs 2 in 2020-09-21T16:11:59.099Z TO 2020-09-21T16:12:00.098Z
+ INFO 2020-09-23 19:10:53,865 (RangesCreator.java:134) [RangesCreator] - 1 Num of numOfRecs 1 in 2020-09-21T16:12:00.539Z TO 2020-09-21T16:12:00.539Z
+ INFO 2020-09-23 19:10:53,866 (RangesCreator.java:150) [RangesCreator] - Calculated NumOfRecord 55070
+ INFO 2020-09-23 19:10:53,867 (RangesCreator.java:67) [RangesCreator] - Range creation took 2 seconds
+ INFO 2020-09-23 19:10:54,805 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-08-30T09:03:58.099Z TO 2020-08-30T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,806 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,807 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 2736 records of time range 2020-09-08T12:03:58.099Z TO 2020-09-08T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,807 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 5 records of time range 2020-09-10T12:03:58.099Z TO 2020-09-10T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,807 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,809 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 17056 records of time range 2020-09-03T12:03:58.099Z TO 2020-09-03T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,809 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,807 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,815 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:10:54,823 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 2 records of time range 2020-09-18T02:03:58.099Z TO 2020-09-18T03:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,823 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,824 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:54,824 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:10:54,825 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 16 records of time range 2020-09-17T10:03:58.099Z TO 2020-09-17T11:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,826 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,834 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:54,834 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:54,835 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:54,834 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:54,834 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:54,836 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 21 records of time range 2020-09-19T03:36:58.099Z TO 2020-09-19T04:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,836 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,850 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 135 records of time range 2020-09-15T09:03:58.099Z TO 2020-09-15T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,851 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,875 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 19 records of time range 2020-09-20T03:36:58.099Z TO 2020-09-20T04:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,876 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,880 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:10:54,881 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 120 records of time range 2020-09-10T13:03:58.099Z TO 2020-09-10T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,881 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,968 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:10:54,970 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:10:54,972 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:10:54,978 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 20 records of time range 2020-09-20T12:36:58.099Z TO 2020-09-20T13:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,978 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 4 records of time range 2020-09-17T13:03:58.099Z TO 2020-09-17T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,979 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,988 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 2 records of time range 2020-09-19T15:36:58.099Z TO 2020-09-19T16:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:54,989 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,978 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:54,989 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,002 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 10 records of time range 2020-09-18T06:03:58.099Z TO 2020-09-18T07:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,003 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,006 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,008 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 195 records of time range 2020-09-15T10:03:58.099Z TO 2020-09-15T11:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,009 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,009 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,013 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,013 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 1 records of time range 2020-09-17T16:03:58.099Z TO 2020-09-17T17:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,013 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,014 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 21 records of time range 2020-09-20T17:36:58.099Z TO 2020-09-20T18:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,014 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,013 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,019 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-09-19T16:36:58.099Z TO 2020-09-19T17:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,020 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,020 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,026 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,026 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 54 records of time range 2020-09-18T08:03:58.099Z TO 2020-09-18T09:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,027 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,026 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 1 records of time range 2020-09-21T07:36:58.099Z TO 2020-09-21T08:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,028 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,028 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,029 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,031 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 4 records of time range 2020-09-19T19:36:58.099Z TO 2020-09-19T20:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,031 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,036 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 1 records of time range 2020-09-20T19:36:58.099Z TO 2020-09-20T20:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,037 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,038 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 51 records of time range 2020-09-17T19:03:58.099Z TO 2020-09-17T20:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,038 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,051 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,052 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,058 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 1 records of time range 2020-09-20T20:36:58.099Z TO 2020-09-20T21:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,059 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,060 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,083 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,083 (SolrExporter.java:90) [SolrExporter#7] - No more time range elements for this thread.
+ INFO 2020-09-23 19:10:55,084 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (5) to become empty
+ INFO 2020-09-23 19:10:55,084 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,086 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,086 (SolrExporter.java:90) [SolrExporter#3] - No more time range elements for this thread.
+ INFO 2020-09-23 19:10:55,086 (Monitor.java:310) [SolrExporter#3] - Thread [3] Waiting for exportTimeRanges (4) to become empty
+ INFO 2020-09-23 19:10:55,083 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 6580 records of time range 2020-09-21T11:36:58.099Z TO 2020-09-21T12:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,087 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,083 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 819 records of time range 2020-09-18T09:03:58.099Z TO 2020-09-18T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,093 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,117 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 13 records of time range 2020-09-17T21:03:58.099Z TO 2020-09-17T22:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,117 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,129 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,129 (SolrExporter.java:90) [SolrExporter#5] - No more time range elements for this thread.
+ INFO 2020-09-23 19:10:55,130 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (4) to become empty
+ INFO 2020-09-23 19:10:55,130 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,143 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 20 records of time range 2020-09-15T11:03:58.099Z TO 2020-09-15T12:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,155 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,172 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,193 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 1 records of time range 2020-09-15T12:03:58.099Z TO 2020-09-15T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,194 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,206 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,206 (SolrExporter.java:90) [SolrExporter#4] - No more time range elements for this thread.
+ INFO 2020-09-23 19:10:55,207 (Monitor.java:310) [SolrExporter#4] - Thread [4] Waiting for exportTimeRanges (3) to become empty
+ INFO 2020-09-23 19:10:55,233 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200830-0001 1 records
+ INFO 2020-09-23 19:10:55,288 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200910-0001 5 records
+ INFO 2020-09-23 19:10:55,370 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,381 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 80 records of time range 2020-09-18T10:03:58.099Z TO 2020-09-18T10:33:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,381 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,426 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,445 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 1220 records of time range 2020-09-18T10:33:58.099Z TO 2020-09-18T10:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,446 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,683 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,748 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 299 records of time range 2020-09-08T13:03:58.099Z TO 2020-09-08T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,749 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,815 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,839 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 39 records of time range 2020-09-08T14:03:58.099Z TO 2020-09-08T15:03:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,839 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,847 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,857 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:10:55,857 (SolrExporter.java:90) [SolrExporter#0] - No more time range elements for this thread.
+ INFO 2020-09-23 19:10:55,857 (Monitor.java:310) [SolrExporter#0] - Thread [0] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:10:55,860 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 19815 records of time range 2020-09-18T10:36:58.099Z TO 2020-09-18T11:36:58.098Z tot 55070
+ INFO 2020-09-23 19:10:55,861 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:55,908 (EsImporter.java:137) [EsImporter#1] - Imported 1 records OF 55070 --> 0.0018158707100054475%
+ INFO 2020-09-23 19:10:55,908 (EsImporter.java:93) [EsImporter#1] - Import took 1 seconds
+ INFO 2020-09-23 19:10:55,911 (EsImporter.java:137) [EsImporter#2] - Imported 6 records OF 55070 --> 0.010895224260032685%
+ INFO 2020-09-23 19:10:55,911 (EsImporter.java:93) [EsImporter#2] - Import took 1 seconds
+ INFO 2020-09-23 19:10:55,960 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200919-0001 21 records
+ INFO 2020-09-23 19:10:55,985 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200918-0001 2 records
+ INFO 2020-09-23 19:10:56,055 (EsImporter.java:137) [EsImporter#2] - Imported 8 records OF 55070 --> 0.01452696568004358%
+ INFO 2020-09-23 19:10:56,056 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,076 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200917-0001 16 records
+ INFO 2020-09-23 19:10:56,122 (EsImporter.java:137) [EsImporter#1] - Imported 29 records OF 55070 --> 0.05266025059015798%
+ INFO 2020-09-23 19:10:56,122 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,139 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200920-0001 19 records
+ INFO 2020-09-23 19:10:56,178 (EsImporter.java:137) [EsImporter#2] - Imported 45 records OF 55070 --> 0.08171418195024514%
+ INFO 2020-09-23 19:10:56,179 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,191 (EsImporter.java:137) [EsImporter#1] - Imported 64 records OF 55070 --> 0.11621572544034864%
+ INFO 2020-09-23 19:10:56,191 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,195 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200920-0001 20 records
+ INFO 2020-09-23 19:10:56,219 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200915-0001 135 records
+ INFO 2020-09-23 19:10:56,315 (EsImporter.java:137) [EsImporter#1] - Imported 84 records OF 55070 --> 0.15253313964045762%
+ INFO 2020-09-23 19:10:56,315 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,317 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200917-0001 4 records
+ INFO 2020-09-23 19:10:56,376 (EsImporter.java:137) [EsImporter#1] - Imported 88 records OF 55070 --> 0.15979662248047938%
+ INFO 2020-09-23 19:10:56,376 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,377 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200919-0001 2 records
+ INFO 2020-09-23 19:10:56,475 (EsImporter.java:137) [EsImporter#1] - Imported 90 records OF 55070 --> 0.1634283639004903%
+ INFO 2020-09-23 19:10:56,476 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,478 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200918-0001 10 records
+ INFO 2020-09-23 19:10:56,501 (EsImporter.java:137) [EsImporter#2] - Imported 225 records OF 55070 --> 0.4085709097512257%
+ INFO 2020-09-23 19:10:56,502 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,515 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200910-0001 120 records
+ INFO 2020-09-23 19:10:56,558 (EsImporter.java:137) [EsImporter#1] - Imported 235 records OF 55070 --> 0.4267296168512802%
+ INFO 2020-09-23 19:10:56,558 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,559 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200919-0001 1 records
+ INFO 2020-09-23 19:10:56,661 (EsImporter.java:137) [EsImporter#1] - Imported 236 records OF 55070 --> 0.4285454875612857%
+ INFO 2020-09-23 19:10:56,662 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,665 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200920-0001 21 records
+ INFO 2020-09-23 19:10:56,795 (EsImporter.java:137) [EsImporter#1] - Imported 257 records OF 55070 --> 0.4666787724714%
+ INFO 2020-09-23 19:10:56,796 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,797 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200917-0001 1 records
+ INFO 2020-09-23 19:10:56,811 (EsImporter.java:137) [EsImporter#2] - Imported 377 records OF 55070 --> 0.6845832576720537%
+ INFO 2020-09-23 19:10:56,811 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,813 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200920-0001 1 records
+ INFO 2020-09-23 19:10:56,832 (EsImporter.java:137) [EsImporter#2] - Imported 378 records OF 55070 --> 0.6863991283820592%
+ INFO 2020-09-23 19:10:56,833 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,842 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200918-0001 54 records
+ INFO 2020-09-23 19:10:56,861 (EsImporter.java:137) [EsImporter#1] - Imported 379 records OF 55070 --> 0.6882149990920646%
+ INFO 2020-09-23 19:10:56,861 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,874 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200921-0001 1 records
+ INFO 2020-09-23 19:10:56,994 (EsImporter.java:137) [EsImporter#1] - Imported 380 records OF 55070 --> 0.6900308698020701%
+ INFO 2020-09-23 19:10:56,994 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:56,995 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200920-0001 1 records
+ INFO 2020-09-23 19:10:57,062 (EsImporter.java:137) [EsImporter#2] - Imported 434 records OF 55070 --> 0.7880878881423643%
+ INFO 2020-09-23 19:10:57,063 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,069 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200917-0001 51 records
+ INFO 2020-09-23 19:10:57,074 (EsImporter.java:137) [EsImporter#1] - Imported 435 records OF 55070 --> 0.7899037588523697%
+ INFO 2020-09-23 19:10:57,074 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,075 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200919-0001 4 records
+ INFO 2020-09-23 19:10:57,151 (EsImporter.java:137) [EsImporter#1] - Imported 439 records OF 55070 --> 0.7971672416923915%
+ INFO 2020-09-23 19:10:57,152 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,154 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200917-0001 13 records
+ INFO 2020-09-23 19:10:57,227 (EsImporter.java:137) [EsImporter#1] - Imported 452 records OF 55070 --> 0.8207735609224622%
+ INFO 2020-09-23 19:10:57,228 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,244 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200915-0001 195 records
+ INFO 2020-09-23 19:10:57,406 (EsImporter.java:137) [EsImporter#2] - Imported 503 records OF 55070 --> 0.9133829671327401%
+ INFO 2020-09-23 19:10:57,407 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,409 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200915-0001 20 records
+ INFO 2020-09-23 19:10:57,623 (EsImporter.java:137) [EsImporter#2] - Imported 523 records OF 55070 --> 0.9497003813328492%
+ INFO 2020-09-23 19:10:57,623 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,624 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200915-0001 1 records
+ INFO 2020-09-23 19:10:57,689 (SolrExporter.java:160) [SolrExporter#1] - Export took 2 seconds
+ INFO 2020-09-23 19:10:57,715 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 5 records of time range 2020-09-21T15:36:58.099Z TO 2020-09-21T16:06:58.098Z tot 55070
+ INFO 2020-09-23 19:10:57,715 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:57,726 (EsImporter.java:137) [EsImporter#2] - Imported 524 records OF 55070 --> 0.9515162520428545%
+ INFO 2020-09-23 19:10:57,726 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,729 (EsImporter.java:137) [EsImporter#1] - Imported 719 records OF 55070 --> 1.3056110404939167%
+ INFO 2020-09-23 19:10:57,730 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:10:57,753 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200918-0001 80 records
+ INFO 2020-09-23 19:10:57,818 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:10:57,848 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 962 records of time range 2020-09-21T16:06:58.099Z TO 2020-09-21T16:09:58.098Z tot 55070
+ INFO 2020-09-23 19:10:57,848 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:57,886 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200918-0001 819 records
+ INFO 2020-09-23 19:10:57,977 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200921-0001 5 records
+ INFO 2020-09-23 19:10:57,995 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200908-0001 39 records
+ INFO 2020-09-23 19:10:58,060 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200908-0001 299 records
+ INFO 2020-09-23 19:10:58,084 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:10:58,093 (Monitor.java:310) [SolrExporter#3] - Thread [3] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:10:58,130 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:10:58,346 (Monitor.java:310) [SolrExporter#4] - Thread [4] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:10:58,469 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:10:58,470 (EsImporter.java:137) [EsImporter#7] - Imported 724 records OF 55070 --> 1.314690394043944%
+ INFO 2020-09-23 19:10:58,471 (EsImporter.java:93) [EsImporter#7] - Import took 0 seconds
+ INFO 2020-09-23 19:10:58,476 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200908-0001 2736 records
+ INFO 2020-09-23 19:10:58,741 (EsImporter.java:137) [EsImporter#1] - Imported 804 records OF 55070 --> 1.4599600508443797%
+ INFO 2020-09-23 19:10:58,742 (EsImporter.java:93) [EsImporter#1] - Import took 1 seconds
+ INFO 2020-09-23 19:10:58,742 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:58,803 (EsImporter.java:137) [EsImporter#3] - Imported 843 records OF 55070 --> 1.5307790085345923%
+ INFO 2020-09-23 19:10:58,804 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:10:58,804 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:10:58,811 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200918-0001 1220 records
+ INFO 2020-09-23 19:10:58,858 (Monitor.java:310) [SolrExporter#0] - Thread [0] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:10:59,053 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200921-0001 962 records
+ INFO 2020-09-23 19:10:59,214 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 2872 records of time range 2020-09-21T16:09:58.099Z TO 2020-09-21T16:10:58.098Z tot 55070
+ INFO 2020-09-23 19:10:59,214 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:10:59,623 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200921-0001 6580 records
+ INFO 2020-09-23 19:11:00,622 (EsImporter.java:137) [EsImporter#6] - Imported 1142 records OF 55070 --> 2.0737243508262213%
+ INFO 2020-09-23 19:11:00,622 (EsImporter.java:93) [EsImporter#6] - Import took 2 seconds
+ INFO 2020-09-23 19:11:00,622 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:00,709 (EsImporter.java:137) [EsImporter#7] - Imported 2104 records OF 55070 --> 3.8205919738514615%
+ INFO 2020-09-23 19:11:00,709 (EsImporter.java:93) [EsImporter#7] - Import took 2 seconds
+ INFO 2020-09-23 19:11:00,710 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:01,038 (SolrExporter.java:160) [SolrExporter#1] - Export took 1 seconds
+ INFO 2020-09-23 19:11:01,051 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 1865 records of time range 2020-09-21T16:10:58.099Z TO 2020-09-21T16:11:58.098Z tot 55070
+ INFO 2020-09-23 19:11:01,051 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:01,085 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:01,094 (Monitor.java:310) [SolrExporter#3] - Thread [3] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:01,132 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:01,347 (Monitor.java:310) [SolrExporter#4] - Thread [4] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:01,542 (EsImporter.java:137) [EsImporter#2] - Imported 2923 records OF 55070 --> 5.307790085345923%
+ INFO 2020-09-23 19:11:01,542 (EsImporter.java:93) [EsImporter#2] - Import took 3 seconds
+ INFO 2020-09-23 19:11:01,742 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:01,748 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:11:01,757 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 2 records of time range 2020-09-21T16:11:59.099Z TO 2020-09-21T16:12:00.098Z tot 55070
+ INFO 2020-09-23 19:11:01,758 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:01,766 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:11:01,776 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 1 records of time range 2020-09-21T16:12:00.539Z TO 2020-09-21T16:12:00.539Z tot 55070
+ INFO 2020-09-23 19:11:01,776 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:01,783 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:11:01,783 (SolrExporter.java:90) [SolrExporter#1] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:01,784 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:01,802 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200921-0001 2872 records
+ INFO 2020-09-23 19:11:01,860 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:02,023 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200921-0001 1865 records
+ INFO 2020-09-23 19:11:02,481 (SolrExporter.java:160) [SolrExporter#2] - Export took 7 seconds
+ INFO 2020-09-23 19:11:02,481 (SolrExporter.java:90) [SolrExporter#2] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:02,481 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:02,901 (EsImporter.java:137) [EsImporter#5] - Imported 4143 records OF 55070 --> 7.52315235155257%
+ INFO 2020-09-23 19:11:02,901 (EsImporter.java:93) [EsImporter#5] - Import took 5 seconds
+ INFO 2020-09-23 19:11:02,901 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200921-0001 2 records
+ INFO 2020-09-23 19:11:03,517 (EsImporter.java:137) [EsImporter#0] - Imported 6879 records OF 55070 --> 12.491374614127475%
+ INFO 2020-09-23 19:11:03,517 (EsImporter.java:93) [EsImporter#0] - Import took 5 seconds
+ INFO 2020-09-23 19:11:03,518 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200921-0001 1 records
+ INFO 2020-09-23 19:11:03,549 (EsImporter.java:137) [EsImporter#5] - Imported 6881 records OF 55070 --> 12.495006355547485%
+ INFO 2020-09-23 19:11:03,550 (EsImporter.java:93) [EsImporter#5] - Import took 0 seconds
+ INFO 2020-09-23 19:11:03,549 (EsImporter.java:137) [EsImporter#0] - Imported 6882 records OF 55070 --> 12.49682222625749%
+ INFO 2020-09-23 19:11:03,551 (EsImporter.java:93) [EsImporter#0] - Import took 0 seconds
+ INFO 2020-09-23 19:11:03,551 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:03,625 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:03,711 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:03,815 (SolrExporter.java:160) [SolrExporter#6] - Export took 7 seconds
+ INFO 2020-09-23 19:11:03,815 (SolrExporter.java:90) [SolrExporter#6] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:03,815 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:04,896 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:04,896 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:04,916 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:04,916 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:04,917 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:04,916 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:05,284 (EsImporter.java:137) [EsImporter#3] - Imported 8747 records OF 55070 --> 15.88342110041765%
+ INFO 2020-09-23 19:11:05,286 (EsImporter.java:93) [EsImporter#3] - Import took 3 seconds
+ INFO 2020-09-23 19:11:05,286 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:05,483 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:05,815 (EsImporter.java:137) [EsImporter#2] - Imported 11619 records OF 55070 --> 21.0986017795533%
+ INFO 2020-09-23 19:11:05,816 (EsImporter.java:93) [EsImporter#2] - Import took 4 seconds
+ INFO 2020-09-23 19:11:05,816 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:06,105 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200903-0001 17056 records
+ INFO 2020-09-23 19:11:06,555 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:06,626 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:06,716 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:08,694 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,695 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:08,695 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,695 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,695 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,697 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,707 (EsImporter.java:137) [EsImporter#4] - Imported 18199 records OF 55070 --> 33.04703105138914%
+ INFO 2020-09-23 19:11:08,711 (EsImporter.java:93) [EsImporter#4] - Import took 10 seconds
+ INFO 2020-09-23 19:11:08,711 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:08,696 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,696 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,696 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:08,817 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:08,897 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200918-0001 19815 records
+ INFO 2020-09-23 19:11:09,555 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:09,627 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:09,724 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:11,696 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,696 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:11,697 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,697 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,705 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,708 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,713 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:11,713 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,713 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,713 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:11,818 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:12,557 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:12,629 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:12,725 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:14,697 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,698 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:14,698 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,698 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,706 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,708 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,714 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:14,715 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,715 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,714 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:14,822 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:15,558 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:15,630 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:15,726 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:16,618 (EsImporter.java:137) [EsImporter#5] - Imported 35255 records OF 55070 --> 64.01852188124205%
+ INFO 2020-09-23 19:11:16,627 (EsImporter.java:93) [EsImporter#5] - Import took 13 seconds
+ INFO 2020-09-23 19:11:16,628 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:17,699 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,699 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:17,699 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,699 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,707 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,710 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,715 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:17,716 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,716 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,716 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:17,823 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:18,558 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:18,631 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:18,728 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:18,756 (MigrateInTwoSteps.java:70) [main] - Migration started at Wed Sep 23 19:11:18 CEST 2020
+ INFO 2020-09-23 19:11:18,848 (EsImporter.java:137) [EsImporter#1] - Imported 55070 records OF 55070 --> 100.0%
+ INFO 2020-09-23 19:11:18,848 (EsImporter.java:93) [EsImporter#1] - Import took 13 seconds
+ INFO 2020-09-23 19:11:18,849 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,628 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,634 (RangesCreator.java:72) [RangesCreator] - Getting collection1 statistics
+ INFO 2020-09-23 19:11:19,641 (SolrExporter.java:86) [SolrExporter#0] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,644 (SolrExporter.java:86) [SolrExporter#1] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,646 (SolrExporter.java:86) [SolrExporter#2] - Waiting for 3 seconds for time ranges...
+ with cmd: /usr/bin/curl http://localhost:8983/solr/collection1/select?q=*:*&stats=true&stats.field=insertTime&rows=0&indent=true -o /ericsson/postgres/migration/coreStats.xml :  INFO 2020-09-23 19:11:19,654 (SolrExporter.java:86) [SolrExporter#4] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,655 (SolrExporter.java:86) [SolrExporter#3] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,657 (SolrExporter.java:86) [SolrExporter#5] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,660 (SolrExporter.java:86) [SolrExporter#6] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,662 (SolrExporter.java:86) [SolrExporter#7] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:11:19,665 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,670 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,671 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,672 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,673 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,674 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,676 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:19,675 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   938    0   938    0     0  85272      0 --:--:-- --:--:-- --:--:-- 93800
+ INFO 2020-09-23 19:11:19,852 (RangesCreator.java:99) [RangesCreator] - Total number of records to migrate: 55070 , Min insertTime: Sun Aug 30 09:03:58 CEST 2020, Max insertTime: Mon Sep 21 16:12:00 CEST 2020
+ INFO 2020-09-23 19:11:19,858 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-08-30T09:03:58.099Z TO 2020-08-30T10:03:58.098Z
+ INFO 2020-09-23 19:11:20,348 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 17056 in 2020-09-03T12:03:58.099Z TO 2020-09-03T13:03:58.098Z
+ INFO 2020-09-23 19:11:20,699 (Monitor.java:155) [SolrExporter#2] - failedTimeRanges is empty for thread 2
+ INFO 2020-09-23 19:11:20,699 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:20,700 (Monitor.java:155) [SolrExporter#5] - failedTimeRanges is empty for thread 5
+ INFO 2020-09-23 19:11:20,700 (Monitor.java:155) [SolrExporter#7] - failedTimeRanges is empty for thread 7
+ INFO 2020-09-23 19:11:20,710 (Monitor.java:155) [SolrExporter#3] - failedTimeRanges is empty for thread 3
+ INFO 2020-09-23 19:11:20,715 (Monitor.java:155) [SolrExporter#6] - failedTimeRanges is empty for thread 6
+ INFO 2020-09-23 19:11:20,717 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:20,724 (Monitor.java:155) [SolrExporter#4] - failedTimeRanges is empty for thread 4
+ INFO 2020-09-23 19:11:20,724 (Monitor.java:155) [SolrExporter#0] - failedTimeRanges is empty for thread 0
+ INFO 2020-09-23 19:11:20,725 (Monitor.java:155) [SolrExporter#1] - failedTimeRanges is empty for thread 1
+ INFO 2020-09-23 19:11:20,725 (Monitor.java:100) [SolrExporter#1] - Monitor Thread: Setting exporterAlive = false
+ INFO 2020-09-23 19:11:20,725 (Monitor.java:89) [SolrExporter#1] - Monitor Thread: Stopping...
+ INFO 2020-09-23 19:11:20,726 (Monitor.java:103) [SolrExporter#1] - Time ranges failed in retry: []
+ INFO 2020-09-23 19:11:20,735 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2736 in 2020-09-08T12:03:58.099Z TO 2020-09-08T13:03:58.098Z
+ INFO 2020-09-23 19:11:20,738 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 299 in 2020-09-08T13:03:58.099Z TO 2020-09-08T14:03:58.098Z
+ INFO 2020-09-23 19:11:20,742 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 39 in 2020-09-08T14:03:58.099Z TO 2020-09-08T15:03:58.098Z
+ INFO 2020-09-23 19:11:20,824 (EsImporter.java:61) [EsImporter#2] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [2]
+ INFO 2020-09-23 19:11:20,889 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 5 in 2020-09-10T12:03:58.099Z TO 2020-09-10T13:03:58.098Z
+ INFO 2020-09-23 19:11:20,892 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 120 in 2020-09-10T13:03:58.099Z TO 2020-09-10T14:03:58.098Z
+ INFO 2020-09-23 19:11:21,159 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 135 in 2020-09-15T09:03:58.099Z TO 2020-09-15T10:03:58.098Z
+ INFO 2020-09-23 19:11:21,162 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 195 in 2020-09-15T10:03:58.099Z TO 2020-09-15T11:03:58.098Z
+ INFO 2020-09-23 19:11:21,171 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 20 in 2020-09-15T11:03:58.099Z TO 2020-09-15T12:03:58.098Z
+ INFO 2020-09-23 19:11:21,174 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-15T12:03:58.099Z TO 2020-09-15T13:03:58.098Z
+ INFO 2020-09-23 19:11:21,316 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 16 in 2020-09-17T10:03:58.099Z TO 2020-09-17T11:03:58.098Z
+ INFO 2020-09-23 19:11:21,331 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 4 in 2020-09-17T13:03:58.099Z TO 2020-09-17T14:03:58.098Z
+ INFO 2020-09-23 19:11:21,341 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-17T16:03:58.099Z TO 2020-09-17T17:03:58.098Z
+ INFO 2020-09-23 19:11:21,354 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 51 in 2020-09-17T19:03:58.099Z TO 2020-09-17T20:03:58.098Z
+ INFO 2020-09-23 19:11:21,360 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 13 in 2020-09-17T21:03:58.099Z TO 2020-09-17T22:03:58.098Z
+ INFO 2020-09-23 19:11:21,383 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2 in 2020-09-18T02:03:58.099Z TO 2020-09-18T03:03:58.098Z
+ INFO 2020-09-23 19:11:21,399 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 10 in 2020-09-18T06:03:58.099Z TO 2020-09-18T07:03:58.098Z
+ INFO 2020-09-23 19:11:21,411 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 54 in 2020-09-18T08:03:58.099Z TO 2020-09-18T09:03:58.098Z
+ INFO 2020-09-23 19:11:21,416 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 819 in 2020-09-18T09:03:58.099Z TO 2020-09-18T10:03:58.098Z
+ INFO 2020-09-23 19:11:21,432 (RangesCreator.java:134) [RangesCreator] - 1800000 Num of numOfRecs 80 in 2020-09-18T10:03:58.099Z TO 2020-09-18T10:33:58.098Z
+ INFO 2020-09-23 19:11:21,462 (RangesCreator.java:134) [RangesCreator] - 180000 Num of numOfRecs 1220 in 2020-09-18T10:33:58.099Z TO 2020-09-18T10:36:58.098Z
+ INFO 2020-09-23 19:11:21,465 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 19815 in 2020-09-18T10:36:58.099Z TO 2020-09-18T11:36:58.098Z
+ INFO 2020-09-23 19:11:21,511 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 21 in 2020-09-19T03:36:58.099Z TO 2020-09-19T04:36:58.098Z
+ INFO 2020-09-23 19:11:21,545 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2 in 2020-09-19T15:36:58.099Z TO 2020-09-19T16:36:58.098Z
+ INFO 2020-09-23 19:11:21,548 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-19T16:36:58.099Z TO 2020-09-19T17:36:58.098Z
+ INFO 2020-09-23 19:11:21,559 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 4 in 2020-09-19T19:36:58.099Z TO 2020-09-19T20:36:58.098Z
+ INFO 2020-09-23 19:11:21,559 (EsImporter.java:61) [EsImporter#0] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [0]
+ INFO 2020-09-23 19:11:21,576 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 19 in 2020-09-20T03:36:58.099Z TO 2020-09-20T04:36:58.098Z
+ INFO 2020-09-23 19:11:21,613 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 20 in 2020-09-20T12:36:58.099Z TO 2020-09-20T13:36:58.098Z
+ INFO 2020-09-23 19:11:21,629 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 21 in 2020-09-20T17:36:58.099Z TO 2020-09-20T18:36:58.098Z
+ INFO 2020-09-23 19:11:21,633 (EsImporter.java:61) [EsImporter#6] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [6]
+ INFO 2020-09-23 19:11:21,636 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-20T19:36:58.099Z TO 2020-09-20T20:36:58.098Z
+ INFO 2020-09-23 19:11:21,640 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-20T20:36:58.099Z TO 2020-09-20T21:36:58.098Z
+ INFO 2020-09-23 19:11:21,713 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-21T07:36:58.099Z TO 2020-09-21T08:36:58.098Z
+ INFO 2020-09-23 19:11:21,726 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 6580 in 2020-09-21T11:36:58.099Z TO 2020-09-21T12:36:58.098Z
+ INFO 2020-09-23 19:11:21,729 (EsImporter.java:61) [EsImporter#7] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [7]
+ INFO 2020-09-23 19:11:21,735 (RangesCreator.java:134) [RangesCreator] - 1800000 Num of numOfRecs 5 in 2020-09-21T15:36:58.099Z TO 2020-09-21T16:06:58.098Z
+ INFO 2020-09-23 19:11:21,741 (RangesCreator.java:134) [RangesCreator] - 180000 Num of numOfRecs 962 in 2020-09-21T16:06:58.099Z TO 2020-09-21T16:09:58.098Z
+ INFO 2020-09-23 19:11:21,746 (RangesCreator.java:134) [RangesCreator] - 60000 Num of numOfRecs 2872 in 2020-09-21T16:09:58.099Z TO 2020-09-21T16:10:58.098Z
+ INFO 2020-09-23 19:11:21,751 (RangesCreator.java:134) [RangesCreator] - 60000 Num of numOfRecs 1865 in 2020-09-21T16:10:58.099Z TO 2020-09-21T16:11:58.098Z
+ INFO 2020-09-23 19:11:21,756 (RangesCreator.java:134) [RangesCreator] - 1000 Num of numOfRecs 2 in 2020-09-21T16:11:59.099Z TO 2020-09-21T16:12:00.098Z
+ INFO 2020-09-23 19:11:21,776 (RangesCreator.java:134) [RangesCreator] - 1 Num of numOfRecs 1 in 2020-09-21T16:12:00.539Z TO 2020-09-21T16:12:00.539Z
+ INFO 2020-09-23 19:11:21,776 (RangesCreator.java:150) [RangesCreator] - Calculated NumOfRecord 55070
+ INFO 2020-09-23 19:11:21,777 (RangesCreator.java:67) [RangesCreator] - Range creation took 2 seconds
+ INFO 2020-09-23 19:11:21,849 (EsImporter.java:61) [EsImporter#1] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [1]
+ INFO 2020-09-23 19:11:22,629 (EsImporter.java:61) [EsImporter#5] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [5]
+ INFO 2020-09-23 19:11:22,661 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 17056 records of time range 2020-09-03T12:03:58.099Z TO 2020-09-03T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,662 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,666 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,666 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 2736 records of time range 2020-09-08T12:03:58.099Z TO 2020-09-08T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,667 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,668 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 1 records of time range 2020-08-30T09:03:58.099Z TO 2020-08-30T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,669 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,671 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,672 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,673 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 2 records of time range 2020-09-18T02:03:58.099Z TO 2020-09-18T03:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,673 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,674 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 5 records of time range 2020-09-10T12:03:58.099Z TO 2020-09-10T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,674 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,675 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,675 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,678 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,678 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:22,679 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 135 records of time range 2020-09-15T09:03:58.099Z TO 2020-09-15T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,680 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,680 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,680 (SolrExporter.java:160) [SolrExporter#2] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,699 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 16 records of time range 2020-09-17T10:03:58.099Z TO 2020-09-17T11:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,699 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,746 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 21 records of time range 2020-09-19T03:36:58.099Z TO 2020-09-19T04:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,746 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,747 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,751 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 10 records of time range 2020-09-18T06:03:58.099Z TO 2020-09-18T07:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,751 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,767 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 19 records of time range 2020-09-20T03:36:58.099Z TO 2020-09-20T04:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,767 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,800 (SolrExporter.java:160) [SolrExporter#2] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,801 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 120 records of time range 2020-09-10T13:03:58.099Z TO 2020-09-10T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,801 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,804 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,806 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,811 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,812 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 20 records of time range 2020-09-20T12:36:58.099Z TO 2020-09-20T13:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,813 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,815 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 54 records of time range 2020-09-18T08:03:58.099Z TO 2020-09-18T09:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,815 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,816 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 4 records of time range 2020-09-17T13:03:58.099Z TO 2020-09-17T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,816 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,828 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,834 (SolrExporter.java:160) [SolrExporter#2] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,834 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,835 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 2 records of time range 2020-09-19T15:36:58.099Z TO 2020-09-19T16:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,836 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,839 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 1 records of time range 2020-09-17T16:03:58.099Z TO 2020-09-17T17:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,840 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,843 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 195 records of time range 2020-09-15T10:03:58.099Z TO 2020-09-15T11:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,843 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,844 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,843 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,843 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 21 records of time range 2020-09-20T17:36:58.099Z TO 2020-09-20T18:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,845 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,852 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 51 records of time range 2020-09-17T19:03:58.099Z TO 2020-09-17T20:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,852 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,852 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 1 records of time range 2020-09-19T16:36:58.099Z TO 2020-09-19T17:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,858 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,885 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,891 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,907 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,910 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,912 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 819 records of time range 2020-09-18T09:03:58.099Z TO 2020-09-18T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,912 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,916 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-09-21T07:36:58.099Z TO 2020-09-21T08:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,917 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,917 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 13 records of time range 2020-09-17T21:03:58.099Z TO 2020-09-17T22:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,917 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,922 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 4 records of time range 2020-09-19T19:36:58.099Z TO 2020-09-19T20:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,922 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,925 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,926 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,926 (SolrExporter.java:90) [SolrExporter#5] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:22,927 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (5) to become empty
+ INFO 2020-09-23 19:11:22,926 (SolrExporter.java:160) [SolrExporter#2] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,948 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,948 (SolrExporter.java:90) [SolrExporter#7] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:22,948 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (5) to become empty
+ INFO 2020-09-23 19:11:22,949 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 6580 records of time range 2020-09-21T11:36:58.099Z TO 2020-09-21T12:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,950 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,959 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 1 records of time range 2020-09-20T19:36:58.099Z TO 2020-09-20T20:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,959 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:22,967 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,987 (SolrExporter.java:160) [SolrExporter#2] - Export took 0 seconds
+ INFO 2020-09-23 19:11:22,994 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 20 records of time range 2020-09-15T11:03:58.099Z TO 2020-09-15T12:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:22,994 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:23,004 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 1 records of time range 2020-09-20T20:36:58.099Z TO 2020-09-20T21:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:23,005 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:23,010 (SolrExporter.java:160) [SolrExporter#2] - Export took 0 seconds
+ INFO 2020-09-23 19:11:23,010 (SolrExporter.java:90) [SolrExporter#2] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:23,011 (Monitor.java:310) [SolrExporter#2] - Thread [2] Waiting for exportTimeRanges (4) to become empty
+ INFO 2020-09-23 19:11:23,013 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:11:23,025 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 1 records of time range 2020-09-15T12:03:58.099Z TO 2020-09-15T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:23,026 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:23,051 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:11:23,051 (SolrExporter.java:90) [SolrExporter#4] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:23,051 (Monitor.java:310) [SolrExporter#4] - Thread [4] Waiting for exportTimeRanges (3) to become empty
+ INFO 2020-09-23 19:11:23,067 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200918-0001 2 records
+ INFO 2020-09-23 19:11:23,131 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:11:23,183 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 80 records of time range 2020-09-18T10:03:58.099Z TO 2020-09-18T10:33:58.098Z tot 55070
+ INFO 2020-09-23 19:11:23,183 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:23,224 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:11:23,248 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 1220 records of time range 2020-09-18T10:33:58.099Z TO 2020-09-18T10:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:23,249 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:23,591 (EsImporter.java:137) [EsImporter#6] - Imported 2 records OF 55070 --> 0.003631741420010895%
+ INFO 2020-09-23 19:11:23,591 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:23,606 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200830-0001 1 records
+ INFO 2020-09-23 19:11:23,628 (EsImporter.java:137) [EsImporter#6] - Imported 3 records OF 55070 --> 0.005447612130016342%
+ INFO 2020-09-23 19:11:23,628 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:23,637 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200910-0001 5 records
+ INFO 2020-09-23 19:11:23,639 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:11:23,654 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 19815 records of time range 2020-09-18T10:36:58.099Z TO 2020-09-18T11:36:58.098Z tot 55070
+ INFO 2020-09-23 19:11:23,655 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:23,700 (EsImporter.java:137) [EsImporter#6] - Imported 8 records OF 55070 --> 0.01452696568004358%
+ INFO 2020-09-23 19:11:23,700 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:23,703 (EsImporter.java:61) [EsImporter#3] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [3]
+ INFO 2020-09-23 19:11:23,720 (EsImporter.java:61) [EsImporter#4] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [4]
+ INFO 2020-09-23 19:11:23,720 (MigrateInTwoSteps.java:96) [main] - Total Migration took 32 seconds
+ INFO 2020-09-23 19:11:23,720 (MigrateInTwoSteps.java:98) [main] - To migrate record 55070 migrated record 55070 --> 0 SUCCESS %100.0
+ INFO 2020-09-23 19:11:23,732 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200920-0001 19 records
+ INFO 2020-09-23 19:11:23,916 (EsImporter.java:137) [EsImporter#6] - Imported 27 records OF 55070 --> 0.04902850917014709%
+ INFO 2020-09-23 19:11:23,916 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:23,917 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200918-0001 10 records
+ INFO 2020-09-23 19:11:24,021 (EsImporter.java:137) [EsImporter#6] - Imported 37 records OF 55070 --> 0.06718721627020156%
+ INFO 2020-09-23 19:11:24,021 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,027 (SolrExporter.java:160) [SolrExporter#0] - Export took 1 seconds
+ INFO 2020-09-23 19:11:24,039 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 299 records of time range 2020-09-08T13:03:58.099Z TO 2020-09-08T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:24,040 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:24,058 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200919-0001 21 records
+ INFO 2020-09-23 19:11:24,113 (EsImporter.java:137) [EsImporter#6] - Imported 58 records OF 55070 --> 0.10532050118031595%
+ INFO 2020-09-23 19:11:24,114 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,139 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200917-0001 16 records
+ INFO 2020-09-23 19:11:24,236 (EsImporter.java:137) [EsImporter#6] - Imported 74 records OF 55070 --> 0.13437443254040313%
+ INFO 2020-09-23 19:11:24,237 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,238 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200917-0001 4 records
+ INFO 2020-09-23 19:11:24,381 (EsImporter.java:137) [EsImporter#6] - Imported 78 records OF 55070 --> 0.14163791538042492%
+ INFO 2020-09-23 19:11:24,382 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,385 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200920-0001 20 records
+ INFO 2020-09-23 19:11:24,430 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:11:24,445 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 39 records of time range 2020-09-08T14:03:58.099Z TO 2020-09-08T15:03:58.098Z tot 55070
+ INFO 2020-09-23 19:11:24,445 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:24,463 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:11:24,463 (SolrExporter.java:90) [SolrExporter#0] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:24,464 (Monitor.java:310) [SolrExporter#0] - Thread [0] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:24,467 (EsImporter.java:137) [EsImporter#6] - Imported 98 records OF 55070 --> 0.17795532958053387%
+ INFO 2020-09-23 19:11:24,468 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,518 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200915-0001 135 records
+ INFO 2020-09-23 19:11:24,705 (EsImporter.java:137) [EsImporter#6] - Imported 233 records OF 55070 --> 0.4230978754312693%
+ INFO 2020-09-23 19:11:24,705 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,707 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200919-0001 2 records
+ INFO 2020-09-23 19:11:24,804 (EsImporter.java:137) [EsImporter#6] - Imported 235 records OF 55070 --> 0.4267296168512802%
+ INFO 2020-09-23 19:11:24,804 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,806 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200917-0001 1 records
+ INFO 2020-09-23 19:11:24,857 (EsImporter.java:137) [EsImporter#6] - Imported 236 records OF 55070 --> 0.4285454875612857%
+ INFO 2020-09-23 19:11:24,857 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,866 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200918-0001 54 records
+ INFO 2020-09-23 19:11:24,980 (EsImporter.java:137) [EsImporter#6] - Imported 290 records OF 55070 --> 0.5266025059015798%
+ INFO 2020-09-23 19:11:24,980 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:24,981 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200919-0001 1 records
+ INFO 2020-09-23 19:11:25,028 (EsImporter.java:137) [EsImporter#6] - Imported 291 records OF 55070 --> 0.5284183766115853%
+ INFO 2020-09-23 19:11:25,028 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:25,036 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200917-0001 51 records
+ INFO 2020-09-23 19:11:25,149 (SolrExporter.java:160) [SolrExporter#3] - Export took 2 seconds
+ INFO 2020-09-23 19:11:25,170 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 5 records of time range 2020-09-21T15:36:58.099Z TO 2020-09-21T16:06:58.098Z tot 55070
+ INFO 2020-09-23 19:11:25,170 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:25,199 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:25,212 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 962 records of time range 2020-09-21T16:06:58.099Z TO 2020-09-21T16:09:58.098Z tot 55070
+ INFO 2020-09-23 19:11:25,213 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:25,299 (EsImporter.java:137) [EsImporter#6] - Imported 342 records OF 55070 --> 0.6210277828218631%
+ INFO 2020-09-23 19:11:25,299 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:25,311 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200910-0001 120 records
+ INFO 2020-09-23 19:11:25,614 (EsImporter.java:137) [EsImporter#6] - Imported 462 records OF 55070 --> 0.8389322680225167%
+ INFO 2020-09-23 19:11:25,614 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:25,627 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200921-0001 1 records
+ INFO 2020-09-23 19:11:25,666 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:25,676 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200917-0001 13 records
+ INFO 2020-09-23 19:11:25,691 (EsImporter.java:137) [EsImporter#6] - Imported 463 records OF 55070 --> 0.8407481387325222%
+ INFO 2020-09-23 19:11:25,694 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:25,697 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200920-0001 21 records
+ INFO 2020-09-23 19:11:25,705 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 2872 records of time range 2020-09-21T16:09:58.099Z TO 2020-09-21T16:10:58.098Z tot 55070
+ INFO 2020-09-23 19:11:25,705 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200919-0001 4 records
+ INFO 2020-09-23 19:11:25,705 (SolrExporter.java:186) [SolrExporter#3] - Waiting for already exported file to get consumed.
+ INFO 2020-09-23 19:11:25,723 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200915-0001 195 records
+ INFO 2020-09-23 19:11:25,757 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200920-0001 1 records
+ INFO 2020-09-23 19:11:25,758 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200920-0001 1 records
+ INFO 2020-09-23 19:11:25,831 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200915-0001 1 records
+ INFO 2020-09-23 19:11:25,842 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200915-0001 20 records
+ INFO 2020-09-23 19:11:25,892 (EsImporter.java:137) [EsImporter#6] - Imported 484 records OF 55070 --> 0.8788814236426367%
+ INFO 2020-09-23 19:11:25,892 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:25,929 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:25,974 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:26,046 (Monitor.java:310) [SolrExporter#2] - Thread [2] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:26,056 (Monitor.java:310) [SolrExporter#4] - Thread [4] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:26,122 (EsImporter.java:137) [EsImporter#1] - Imported 497 records OF 55070 --> 0.9024877428727075%
+ INFO 2020-09-23 19:11:26,122 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,143 (EsImporter.java:137) [EsImporter#7] - Imported 501 records OF 55070 --> 0.9097512257127292%
+ INFO 2020-09-23 19:11:26,143 (EsImporter.java:93) [EsImporter#7] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,156 (EsImporter.java:137) [EsImporter#4] - Imported 502 records OF 55070 --> 0.9115670964227347%
+ INFO 2020-09-23 19:11:26,157 (EsImporter.java:93) [EsImporter#4] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,157 (EsImporter.java:137) [EsImporter#3] - Imported 503 records OF 55070 --> 0.9133829671327401%
+ INFO 2020-09-23 19:11:26,158 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,160 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200918-0001 819 records
+ INFO 2020-09-23 19:11:26,171 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200918-0001 80 records
+ INFO 2020-09-23 19:11:26,180 (EsImporter.java:137) [EsImporter#2] - Imported 523 records OF 55070 --> 0.9497003813328492%
+ INFO 2020-09-23 19:11:26,180 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,184 (EsImporter.java:137) [EsImporter#0] - Imported 524 records OF 55070 --> 0.9515162520428545%
+ INFO 2020-09-23 19:11:26,184 (EsImporter.java:93) [EsImporter#0] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,208 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200908-0001 39 records
+ INFO 2020-09-23 19:11:26,286 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200908-0001 299 records
+ INFO 2020-09-23 19:11:26,520 (EsImporter.java:137) [EsImporter#1] - Imported 604 records OF 55070 --> 1.0967859088432903%
+ INFO 2020-09-23 19:11:26,520 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,521 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200921-0001 5 records
+ INFO 2020-09-23 19:11:26,586 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200918-0001 1220 records
+ INFO 2020-09-23 19:11:26,617 (EsImporter.java:137) [EsImporter#2] - Imported 643 records OF 55070 --> 1.1676048665335028%
+ INFO 2020-09-23 19:11:26,617 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,628 (EsImporter.java:137) [EsImporter#5] - Imported 838 records OF 55070 --> 1.5216996549845652%
+ INFO 2020-09-23 19:11:26,629 (EsImporter.java:93) [EsImporter#5] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,629 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:26,906 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200921-0001 962 records
+ INFO 2020-09-23 19:11:26,927 (EsImporter.java:137) [EsImporter#1] - Imported 843 records OF 55070 --> 1.5307790085345923%
+ INFO 2020-09-23 19:11:26,928 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:11:26,928 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:27,017 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200908-0001 2736 records
+ INFO 2020-09-23 19:11:27,544 (Monitor.java:310) [SolrExporter#0] - Thread [0] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:27,558 (EsImporter.java:137) [EsImporter#3] - Imported 1142 records OF 55070 --> 2.0737243508262213%
+ INFO 2020-09-23 19:11:27,558 (EsImporter.java:93) [EsImporter#3] - Import took 1 seconds
+ INFO 2020-09-23 19:11:27,558 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:27,723 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200921-0001 6580 records
+ INFO 2020-09-23 19:11:28,721 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:28,936 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:28,942 (EsImporter.java:137) [EsImporter#2] - Imported 2104 records OF 55070 --> 3.8205919738514615%
+ INFO 2020-09-23 19:11:28,942 (EsImporter.java:93) [EsImporter#2] - Import took 2 seconds
+ INFO 2020-09-23 19:11:28,942 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:28,951 (EsImporter.java:137) [EsImporter#6] - Imported 2923 records OF 55070 --> 5.307790085345923%
+ INFO 2020-09-23 19:11:28,952 (EsImporter.java:93) [EsImporter#6] - Import took 3 seconds
+ INFO 2020-09-23 19:11:28,952 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:28,975 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:29,049 (Monitor.java:310) [SolrExporter#2] - Thread [2] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:29,063 (Monitor.java:310) [SolrExporter#4] - Thread [4] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:29,630 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:29,819 (EsImporter.java:137) [EsImporter#4] - Imported 5659 records OF 55070 --> 10.276012347920828%
+ INFO 2020-09-23 19:11:29,820 (EsImporter.java:93) [EsImporter#4] - Import took 3 seconds
+ INFO 2020-09-23 19:11:29,820 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:29,931 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:30,020 (SolrExporter.java:160) [SolrExporter#3] - Export took 1 seconds
+ INFO 2020-09-23 19:11:30,022 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1865 records of time range 2020-09-21T16:10:58.099Z TO 2020-09-21T16:11:58.098Z tot 55070
+ INFO 2020-09-23 19:11:30,022 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:30,041 (SolrExporter.java:160) [SolrExporter#1] - Export took 7 seconds
+ INFO 2020-09-23 19:11:30,041 (SolrExporter.java:90) [SolrExporter#1] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:30,041 (Monitor.java:310) [SolrExporter#1] - Thread [1] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:11:30,052 (EsImporter.java:137) [EsImporter#7] - Imported 6879 records OF 55070 --> 12.491374614127475%
+ INFO 2020-09-23 19:11:30,053 (EsImporter.java:93) [EsImporter#7] - Import took 3 seconds
+ INFO 2020-09-23 19:11:30,333 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200921-0001 2872 records
+ INFO 2020-09-23 19:11:30,430 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:30,443 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 2 records of time range 2020-09-21T16:11:59.099Z TO 2020-09-21T16:12:00.098Z tot 55070
+ INFO 2020-09-23 19:11:30,443 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:30,484 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:30,506 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-09-21T16:12:00.539Z TO 2020-09-21T16:12:00.539Z tot 55070
+ INFO 2020-09-23 19:11:30,507 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:11:30,518 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:11:30,518 (SolrExporter.java:90) [SolrExporter#3] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:30,519 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:30,548 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:30,594 (SolrExporter.java:160) [SolrExporter#6] - Export took 6 seconds
+ INFO 2020-09-23 19:11:30,595 (SolrExporter.java:90) [SolrExporter#6] - No more time range elements for this thread.
+ INFO 2020-09-23 19:11:30,595 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:32,771 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:32,771 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:32,771 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:32,774 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200921-0001 2 records
+ INFO 2020-09-23 19:11:32,783 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200921-0001 1 records
+ INFO 2020-09-23 19:11:32,789 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:32,909 (EsImporter.java:137) [EsImporter#2] - Imported 6880 records OF 55070 --> 12.49319048483748%
+ INFO 2020-09-23 19:11:32,910 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:11:32,910 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:32,911 (EsImporter.java:137) [EsImporter#6] - Imported 6882 records OF 55070 --> 12.49682222625749%
+ INFO 2020-09-23 19:11:32,911 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:11:32,911 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:32,933 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:32,976 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200921-0001 1865 records
+ INFO 2020-09-23 19:11:33,042 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:33,900 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:33,900 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:33,902 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:34,091 (MigrateInTwoSteps.java:103) [main] - NUM of Document in ES 388707
+ INFO 2020-09-23 19:11:34,276 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200903-0001 17056 records
+ INFO 2020-09-23 19:11:37,731 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,733 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,743 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,743 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,743 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:37,747 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:37,748 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:37,769 (EsImporter.java:137) [EsImporter#7] - Imported 9754 records OF 55070 --> 17.71200290539314%
+ INFO 2020-09-23 19:11:37,770 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,770 (EsImporter.java:93) [EsImporter#7] - Import took 7 seconds
+ INFO 2020-09-23 19:11:37,770 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:37,771 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,774 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,775 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:37,796 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200918-0001 19815 records
+ INFO 2020-09-23 19:11:37,848 (EsImporter.java:137) [EsImporter#5] - Imported 11619 records OF 55070 --> 21.0986017795533%
+ INFO 2020-09-23 19:11:37,849 (EsImporter.java:93) [EsImporter#5] - Import took 5 seconds
+ INFO 2020-09-23 19:11:37,849 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:38,035 (EsImporter.java:137) [EsImporter#0] - Imported 18199 records OF 55070 --> 33.04703105138914%
+ INFO 2020-09-23 19:11:38,040 (EsImporter.java:93) [EsImporter#0] - Import took 11 seconds
+ INFO 2020-09-23 19:11:38,040 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:40,732 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,733 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,743 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:40,744 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,744 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,749 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:40,751 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:40,770 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,770 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:40,773 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,776 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,776 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:40,850 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:41,043 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:43,733 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,734 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,744 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,745 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:43,745 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,750 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:43,751 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:43,771 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,771 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:43,773 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,776 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,776 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:43,851 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:44,044 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:44,885 (EsImporter.java:137) [EsImporter#3] - Imported 35255 records OF 55070 --> 64.01852188124205%
+ INFO 2020-09-23 19:11:44,891 (EsImporter.java:93) [EsImporter#3] - Import took 14 seconds
+ INFO 2020-09-23 19:11:44,892 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:46,734 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,734 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,745 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:46,746 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,746 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,753 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:46,753 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:46,771 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:46,775 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,777 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,780 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,791 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:11:46,852 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:47,044 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:47,098 (EsImporter.java:137) [EsImporter#4] - Imported 55070 records OF 55070 --> 100.0%
+ INFO 2020-09-23 19:11:47,098 (EsImporter.java:93) [EsImporter#4] - Import took 14 seconds
+ INFO 2020-09-23 19:11:47,098 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:47,894 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:49,735 (Monitor.java:155) [SolrExporter#0] - failedTimeRanges is empty for thread 0
+ INFO 2020-09-23 19:11:49,736 (Monitor.java:155) [SolrExporter#3] - failedTimeRanges is empty for thread 3
+ INFO 2020-09-23 19:11:49,746 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:49,746 (Monitor.java:155) [SolrExporter#6] - failedTimeRanges is empty for thread 6
+ INFO 2020-09-23 19:11:49,747 (Monitor.java:155) [SolrExporter#1] - failedTimeRanges is empty for thread 1
+ INFO 2020-09-23 19:11:49,754 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:49,754 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:49,772 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:11:49,777 (Monitor.java:155) [SolrExporter#5] - failedTimeRanges is empty for thread 5
+ INFO 2020-09-23 19:11:49,778 (Monitor.java:155) [SolrExporter#4] - failedTimeRanges is empty for thread 4
+ INFO 2020-09-23 19:11:49,780 (Monitor.java:155) [SolrExporter#2] - failedTimeRanges is empty for thread 2
+ INFO 2020-09-23 19:11:49,792 (Monitor.java:155) [SolrExporter#7] - failedTimeRanges is empty for thread 7
+ INFO 2020-09-23 19:11:49,792 (Monitor.java:100) [SolrExporter#7] - Monitor Thread: Setting exporterAlive = false
+ INFO 2020-09-23 19:11:49,792 (Monitor.java:89) [SolrExporter#7] - Monitor Thread: Stopping...
+ INFO 2020-09-23 19:11:49,793 (Monitor.java:103) [SolrExporter#7] - Time ranges failed in retry: []
+ INFO 2020-09-23 19:11:49,855 (EsImporter.java:61) [EsImporter#5] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [5]
+ INFO 2020-09-23 19:11:50,045 (EsImporter.java:61) [EsImporter#0] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [0]
+ INFO 2020-09-23 19:11:50,099 (EsImporter.java:61) [EsImporter#4] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [4]
+ INFO 2020-09-23 19:11:50,895 (EsImporter.java:61) [EsImporter#3] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [3]
+ INFO 2020-09-23 19:11:52,748 (EsImporter.java:61) [EsImporter#1] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [1]
+ INFO 2020-09-23 19:11:52,756 (EsImporter.java:61) [EsImporter#6] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [6]
+ INFO 2020-09-23 19:11:52,757 (EsImporter.java:61) [EsImporter#2] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [2]
+ INFO 2020-09-23 19:11:52,772 (EsImporter.java:61) [EsImporter#7] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [7]
+ INFO 2020-09-23 19:11:52,773 (MigrateInTwoSteps.java:96) [main] - Total Migration took 34 seconds
+ INFO 2020-09-23 19:11:52,773 (MigrateInTwoSteps.java:98) [main] - To migrate record 55070 migrated record 55070 --> 0 SUCCESS %100.0
+ INFO 2020-09-23 19:12:02,877 (MigrateInTwoSteps.java:103) [main] - NUM of Document in ES 443775
+ INFO 2020-09-23 19:12:50,549 (MigrateInTwoSteps.java:70) [main] - Migration started at Wed Sep 23 19:12:50 CEST 2020
+ INFO 2020-09-23 19:12:51,294 (RangesCreator.java:72) [RangesCreator] - Getting collection1 statistics
+ INFO 2020-09-23 19:12:51,300 (SolrExporter.java:86) [SolrExporter#0] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,306 (SolrExporter.java:86) [SolrExporter#1] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,308 (SolrExporter.java:86) [SolrExporter#2] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,309 (SolrExporter.java:86) [SolrExporter#3] - Waiting for 3 seconds for time ranges...
+ with cmd: /usr/bin/curl http://localhost:8983/solr/collection1/select?q=*:*&stats=true&stats.field=insertTime&rows=0&indent=true -o /ericsson/postgres/migration/coreStats.xml :  INFO 2020-09-23 19:12:51,314 (SolrExporter.java:86) [SolrExporter#4] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,315 (SolrExporter.java:86) [SolrExporter#5] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,319 (SolrExporter.java:86) [SolrExporter#6] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,321 (SolrExporter.java:86) [SolrExporter#7] - Waiting for 3 seconds for time ranges...
+ INFO 2020-09-23 19:12:51,323 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:51,324 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:51,323 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:51,328 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:51,328 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:51,328 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed INFO 2020-09-23 19:12:51,334 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:51,333 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   938    0   938    0     0   101k      0 --:--:-- --:--:-- --:--:--  101k
+ INFO 2020-09-23 19:12:51,490 (RangesCreator.java:99) [RangesCreator] - Total number of records to migrate: 55070 , Min insertTime: Sun Aug 30 09:03:58 CEST 2020, Max insertTime: Mon Sep 21 16:12:00 CEST 2020
+ INFO 2020-09-23 19:12:51,495 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-08-30T09:03:58.099Z TO 2020-08-30T10:03:58.098Z
+ INFO 2020-09-23 19:12:51,941 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 17056 in 2020-09-03T12:03:58.099Z TO 2020-09-03T13:03:58.098Z
+ INFO 2020-09-23 19:12:52,453 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2736 in 2020-09-08T12:03:58.099Z TO 2020-09-08T13:03:58.098Z
+ INFO 2020-09-23 19:12:52,457 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 299 in 2020-09-08T13:03:58.099Z TO 2020-09-08T14:03:58.098Z
+ INFO 2020-09-23 19:12:52,461 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 39 in 2020-09-08T14:03:58.099Z TO 2020-09-08T15:03:58.098Z
+ INFO 2020-09-23 19:12:52,607 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 5 in 2020-09-10T12:03:58.099Z TO 2020-09-10T13:03:58.098Z
+ INFO 2020-09-23 19:12:52,611 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 120 in 2020-09-10T13:03:58.099Z TO 2020-09-10T14:03:58.098Z
+ INFO 2020-09-23 19:12:52,858 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 135 in 2020-09-15T09:03:58.099Z TO 2020-09-15T10:03:58.098Z
+ INFO 2020-09-23 19:12:52,863 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 195 in 2020-09-15T10:03:58.099Z TO 2020-09-15T11:03:58.098Z
+ INFO 2020-09-23 19:12:52,873 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 20 in 2020-09-15T11:03:58.099Z TO 2020-09-15T12:03:58.098Z
+ INFO 2020-09-23 19:12:52,876 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-15T12:03:58.099Z TO 2020-09-15T13:03:58.098Z
+ INFO 2020-09-23 19:12:53,068 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 16 in 2020-09-17T10:03:58.099Z TO 2020-09-17T11:03:58.098Z
+ INFO 2020-09-23 19:12:53,075 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 4 in 2020-09-17T13:03:58.099Z TO 2020-09-17T14:03:58.098Z
+ INFO 2020-09-23 19:12:53,082 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-17T16:03:58.099Z TO 2020-09-17T17:03:58.098Z
+ INFO 2020-09-23 19:12:53,088 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 51 in 2020-09-17T19:03:58.099Z TO 2020-09-17T20:03:58.098Z
+ INFO 2020-09-23 19:12:53,099 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 13 in 2020-09-17T21:03:58.099Z TO 2020-09-17T22:03:58.098Z
+ INFO 2020-09-23 19:12:53,141 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2 in 2020-09-18T02:03:58.099Z TO 2020-09-18T03:03:58.098Z
+ INFO 2020-09-23 19:12:53,153 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 10 in 2020-09-18T06:03:58.099Z TO 2020-09-18T07:03:58.098Z
+ INFO 2020-09-23 19:12:53,158 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 54 in 2020-09-18T08:03:58.099Z TO 2020-09-18T09:03:58.098Z
+ INFO 2020-09-23 19:12:53,164 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 819 in 2020-09-18T09:03:58.099Z TO 2020-09-18T10:03:58.098Z
+ INFO 2020-09-23 19:12:53,174 (RangesCreator.java:134) [RangesCreator] - 1800000 Num of numOfRecs 80 in 2020-09-18T10:03:58.099Z TO 2020-09-18T10:33:58.098Z
+ INFO 2020-09-23 19:12:53,204 (RangesCreator.java:134) [RangesCreator] - 180000 Num of numOfRecs 1220 in 2020-09-18T10:33:58.099Z TO 2020-09-18T10:36:58.098Z
+ INFO 2020-09-23 19:12:53,207 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 19815 in 2020-09-18T10:36:58.099Z TO 2020-09-18T11:36:58.098Z
+ INFO 2020-09-23 19:12:53,246 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 21 in 2020-09-19T03:36:58.099Z TO 2020-09-19T04:36:58.098Z
+ INFO 2020-09-23 19:12:53,265 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 2 in 2020-09-19T15:36:58.099Z TO 2020-09-19T16:36:58.098Z
+ INFO 2020-09-23 19:12:53,267 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-19T16:36:58.099Z TO 2020-09-19T17:36:58.098Z
+ INFO 2020-09-23 19:12:53,276 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 4 in 2020-09-19T19:36:58.099Z TO 2020-09-19T20:36:58.098Z
+ INFO 2020-09-23 19:12:53,287 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 19 in 2020-09-20T03:36:58.099Z TO 2020-09-20T04:36:58.098Z
+ INFO 2020-09-23 19:12:53,320 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 20 in 2020-09-20T12:36:58.099Z TO 2020-09-20T13:36:58.098Z
+ INFO 2020-09-23 19:12:53,333 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 21 in 2020-09-20T17:36:58.099Z TO 2020-09-20T18:36:58.098Z
+ INFO 2020-09-23 19:12:53,337 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-20T19:36:58.099Z TO 2020-09-20T20:36:58.098Z
+ INFO 2020-09-23 19:12:53,339 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-20T20:36:58.099Z TO 2020-09-20T21:36:58.098Z
+ INFO 2020-09-23 19:12:53,361 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 1 in 2020-09-21T07:36:58.099Z TO 2020-09-21T08:36:58.098Z
+ INFO 2020-09-23 19:12:53,373 (RangesCreator.java:134) [RangesCreator] - 3600000 Num of numOfRecs 6580 in 2020-09-21T11:36:58.099Z TO 2020-09-21T12:36:58.098Z
+ INFO 2020-09-23 19:12:53,383 (RangesCreator.java:134) [RangesCreator] - 1800000 Num of numOfRecs 5 in 2020-09-21T15:36:58.099Z TO 2020-09-21T16:06:58.098Z
+ INFO 2020-09-23 19:12:53,388 (RangesCreator.java:134) [RangesCreator] - 180000 Num of numOfRecs 962 in 2020-09-21T16:06:58.099Z TO 2020-09-21T16:09:58.098Z
+ INFO 2020-09-23 19:12:53,392 (RangesCreator.java:134) [RangesCreator] - 60000 Num of numOfRecs 2872 in 2020-09-21T16:09:58.099Z TO 2020-09-21T16:10:58.098Z
+ INFO 2020-09-23 19:12:53,394 (RangesCreator.java:134) [RangesCreator] - 60000 Num of numOfRecs 1865 in 2020-09-21T16:10:58.099Z TO 2020-09-21T16:11:58.098Z
+ INFO 2020-09-23 19:12:53,398 (RangesCreator.java:134) [RangesCreator] - 1000 Num of numOfRecs 2 in 2020-09-21T16:11:59.099Z TO 2020-09-21T16:12:00.098Z
+ INFO 2020-09-23 19:12:53,412 (RangesCreator.java:134) [RangesCreator] - 1 Num of numOfRecs 1 in 2020-09-21T16:12:00.539Z TO 2020-09-21T16:12:00.539Z
+ INFO 2020-09-23 19:12:53,412 (RangesCreator.java:150) [RangesCreator] - Calculated NumOfRecord 55070
+ INFO 2020-09-23 19:12:53,413 (RangesCreator.java:67) [RangesCreator] - Range creation took 2 seconds
+ INFO 2020-09-23 19:12:54,318 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-08-30T09:03:58.099Z TO 2020-08-30T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,318 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,324 (SolrExporter.java:114) [SolrExporter#2] - Going to migrate 17056 records of time range 2020-09-03T12:03:58.099Z TO 2020-09-03T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,325 (SolrExporter.java:142) [SolrExporter#2] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,325 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,326 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,326 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,329 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,329 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,342 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,342 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,343 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:12:54,344 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 2736 records of time range 2020-09-08T12:03:58.099Z TO 2020-09-08T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,344 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,351 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,360 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 16 records of time range 2020-09-17T10:03:58.099Z TO 2020-09-17T11:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,361 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,361 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 21 records of time range 2020-09-19T03:36:58.099Z TO 2020-09-19T04:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,361 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,362 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 135 records of time range 2020-09-15T09:03:58.099Z TO 2020-09-15T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,362 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,365 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 2 records of time range 2020-09-18T02:03:58.099Z TO 2020-09-18T03:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,366 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,367 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 5 records of time range 2020-09-10T12:03:58.099Z TO 2020-09-10T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,367 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,390 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 19 records of time range 2020-09-20T03:36:58.099Z TO 2020-09-20T04:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,390 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,393 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,414 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,415 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,415 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,416 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 2 records of time range 2020-09-19T15:36:58.099Z TO 2020-09-19T16:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,417 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,424 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,425 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 120 records of time range 2020-09-10T13:03:58.099Z TO 2020-09-10T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,425 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,426 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 10 records of time range 2020-09-18T06:03:58.099Z TO 2020-09-18T07:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,426 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,427 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,426 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 20 records of time range 2020-09-20T12:36:58.099Z TO 2020-09-20T13:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,427 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,442 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,456 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,457 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 4 records of time range 2020-09-17T13:03:58.099Z TO 2020-09-17T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,458 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,459 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 195 records of time range 2020-09-15T10:03:58.099Z TO 2020-09-15T11:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,459 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,460 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 1 records of time range 2020-09-19T16:36:58.099Z TO 2020-09-19T17:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,461 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,464 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,465 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,466 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 54 records of time range 2020-09-18T08:03:58.099Z TO 2020-09-18T09:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,466 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,473 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,477 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,478 (SolrExporter.java:114) [SolrExporter#7] - Going to migrate 4 records of time range 2020-09-19T19:36:58.099Z TO 2020-09-19T20:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,478 (SolrExporter.java:142) [SolrExporter#7] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,479 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 1 records of time range 2020-09-21T07:36:58.099Z TO 2020-09-21T08:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,480 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,480 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 1 records of time range 2020-09-17T16:03:58.099Z TO 2020-09-17T17:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,480 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,483 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 21 records of time range 2020-09-20T17:36:58.099Z TO 2020-09-20T18:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,484 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,488 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,489 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,489 (SolrExporter.java:160) [SolrExporter#7] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,490 (SolrExporter.java:90) [SolrExporter#7] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:54,492 (Monitor.java:310) [SolrExporter#7] - Thread [7] Waiting for exportTimeRanges (6) to become empty
+ INFO 2020-09-23 19:12:54,515 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,518 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 51 records of time range 2020-09-17T19:03:58.099Z TO 2020-09-17T20:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,518 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,519 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 6580 records of time range 2020-09-21T11:36:58.099Z TO 2020-09-21T12:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,520 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,521 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,523 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 819 records of time range 2020-09-18T09:03:58.099Z TO 2020-09-18T10:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,524 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,526 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-09-20T19:36:58.099Z TO 2020-09-20T20:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,526 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,529 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,538 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,553 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,556 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 20 records of time range 2020-09-15T11:03:58.099Z TO 2020-09-15T12:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,556 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,557 (SolrExporter.java:114) [SolrExporter#0] - Going to migrate 13 records of time range 2020-09-17T21:03:58.099Z TO 2020-09-17T22:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,557 (SolrExporter.java:142) [SolrExporter#0] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,563 (SolrExporter.java:114) [SolrExporter#3] - Going to migrate 1 records of time range 2020-09-20T20:36:58.099Z TO 2020-09-20T21:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,563 (SolrExporter.java:142) [SolrExporter#3] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,568 (SolrExporter.java:160) [SolrExporter#0] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,569 (SolrExporter.java:90) [SolrExporter#0] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:54,569 (Monitor.java:310) [SolrExporter#0] - Thread [0] Waiting for exportTimeRanges (4) to become empty
+ INFO 2020-09-23 19:12:54,579 (SolrExporter.java:160) [SolrExporter#3] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,580 (SolrExporter.java:90) [SolrExporter#3] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:54,580 (Monitor.java:310) [SolrExporter#3] - Thread [3] Waiting for exportTimeRanges (4) to become empty
+ INFO 2020-09-23 19:12:54,582 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,589 (SolrExporter.java:114) [SolrExporter#5] - Going to migrate 1 records of time range 2020-09-15T12:03:58.099Z TO 2020-09-15T13:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,589 (SolrExporter.java:142) [SolrExporter#5] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,598 (SolrExporter.java:160) [SolrExporter#5] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,598 (SolrExporter.java:90) [SolrExporter#5] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:54,599 (Monitor.java:310) [SolrExporter#5] - Thread [5] Waiting for exportTimeRanges (3) to become empty
+ INFO 2020-09-23 19:12:54,707 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,719 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 80 records of time range 2020-09-18T10:03:58.099Z TO 2020-09-18T10:33:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,719 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,756 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,781 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 1220 records of time range 2020-09-18T10:33:58.099Z TO 2020-09-18T10:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,781 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,860 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,908 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 299 records of time range 2020-09-08T13:03:58.099Z TO 2020-09-08T14:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,909 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,921 (SolrExporter.java:160) [SolrExporter#6] - Export took 0 seconds
+ INFO 2020-09-23 19:12:54,940 (SolrExporter.java:114) [SolrExporter#6] - Going to migrate 19815 records of time range 2020-09-18T10:36:58.099Z TO 2020-09-18T11:36:58.098Z tot 55070
+ INFO 2020-09-23 19:12:54,940 (SolrExporter.java:142) [SolrExporter#6] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:54,989 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:12:55,007 (SolrExporter.java:114) [SolrExporter#1] - Going to migrate 39 records of time range 2020-09-08T14:03:58.099Z TO 2020-09-08T15:03:58.098Z tot 55070
+ INFO 2020-09-23 19:12:55,008 (SolrExporter.java:142) [SolrExporter#1] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:55,024 (SolrExporter.java:160) [SolrExporter#1] - Export took 0 seconds
+ INFO 2020-09-23 19:12:55,024 (SolrExporter.java:90) [SolrExporter#1] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:55,025 (Monitor.java:310) [SolrExporter#1] - Thread [1] Waiting for exportTimeRanges (1) to become empty
+ INFO 2020-09-23 19:12:55,748 (SolrExporter.java:160) [SolrExporter#4] - Export took 1 seconds
+ INFO 2020-09-23 19:12:55,755 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 5 records of time range 2020-09-21T15:36:58.099Z TO 2020-09-21T16:06:58.098Z tot 55070
+ INFO 2020-09-23 19:12:55,755 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:55,766 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:55,769 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 962 records of time range 2020-09-21T16:06:58.099Z TO 2020-09-21T16:09:58.098Z tot 55070
+ INFO 2020-09-23 19:12:55,769 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:55,909 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:55,913 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 2872 records of time range 2020-09-21T16:09:58.099Z TO 2020-09-21T16:10:58.098Z tot 55070
+ INFO 2020-09-23 19:12:55,913 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:56,296 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:56,306 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 1865 records of time range 2020-09-21T16:10:58.099Z TO 2020-09-21T16:11:58.098Z tot 55070
+ INFO 2020-09-23 19:12:56,306 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:56,528 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:56,532 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 2 records of time range 2020-09-21T16:11:59.099Z TO 2020-09-21T16:12:00.098Z tot 55070
+ INFO 2020-09-23 19:12:56,532 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:56,538 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:56,541 (SolrExporter.java:114) [SolrExporter#4] - Going to migrate 1 records of time range 2020-09-21T16:12:00.539Z TO 2020-09-21T16:12:00.539Z tot 55070
+ INFO 2020-09-23 19:12:56,542 (SolrExporter.java:142) [SolrExporter#4] - Iteration: 1 . Exporting 20000 records from solr...
+ INFO 2020-09-23 19:12:56,546 (SolrExporter.java:160) [SolrExporter#4] - Export took 0 seconds
+ INFO 2020-09-23 19:12:56,547 (SolrExporter.java:90) [SolrExporter#4] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:56,547 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:56,885 (SolrExporter.java:160) [SolrExporter#2] - Export took 2 seconds
+ INFO 2020-09-23 19:12:56,885 (SolrExporter.java:90) [SolrExporter#2] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:56,886 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:57,320 (SolrExporter.java:160) [SolrExporter#6] - Export took 2 seconds
+ INFO 2020-09-23 19:12:57,320 (SolrExporter.java:90) [SolrExporter#6] - No more time range elements for this thread.
+ INFO 2020-09-23 19:12:57,320 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:57,495 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:57,570 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:57,580 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:57,587 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200830-0001 1 records
+ INFO 2020-09-23 19:12:57,604 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:57,612 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200917-0001 16 records
+ INFO 2020-09-23 19:12:57,626 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200919-0001 2 records
+ INFO 2020-09-23 19:12:57,664 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200915-0001 135 records
+ INFO 2020-09-23 19:12:57,686 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200910-0001 5 records
+ INFO 2020-09-23 19:12:57,714 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200918-0001 2 records
+ INFO 2020-09-23 19:12:57,722 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200919-0001 21 records
+ INFO 2020-09-23 19:12:57,769 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200920-0001 19 records
+ INFO 2020-09-23 19:12:58,044 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:58,126 (EsImporter.java:137) [EsImporter#6] - Imported 16 records OF 55070 --> 0.02905393136008716%
+ INFO 2020-09-23 19:12:58,127 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,129 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200918-0001 10 records
+ INFO 2020-09-23 19:12:58,132 (EsImporter.java:137) [EsImporter#1] - Imported 17 records OF 55070 --> 0.03086980207009261%
+ INFO 2020-09-23 19:12:58,132 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,134 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200917-0001 4 records
+ INFO 2020-09-23 19:12:58,135 (EsImporter.java:137) [EsImporter#7] - Imported 19 records OF 55070 --> 0.03450154349010351%
+ INFO 2020-09-23 19:12:58,135 (EsImporter.java:93) [EsImporter#7] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,136 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200919-0001 1 records
+ INFO 2020-09-23 19:12:58,141 (EsImporter.java:137) [EsImporter#2] - Imported 40 records OF 55070 --> 0.0726348284002179%
+ INFO 2020-09-23 19:12:58,141 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,144 (EsImporter.java:137) [EsImporter#4] - Imported 42 records OF 55070 --> 0.07626656982022881%
+ INFO 2020-09-23 19:12:58,144 (EsImporter.java:93) [EsImporter#4] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,147 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200920-0001 20 records
+ INFO 2020-09-23 19:12:58,150 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200910-0001 120 records
+ INFO 2020-09-23 19:12:58,157 (EsImporter.java:137) [EsImporter#0] - Imported 61 records OF 55070 --> 0.1107681133103323%
+ INFO 2020-09-23 19:12:58,158 (EsImporter.java:93) [EsImporter#0] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,187 (EsImporter.java:137) [EsImporter#3] - Imported 66 records OF 55070 --> 0.11984746686035953%
+ INFO 2020-09-23 19:12:58,187 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,189 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200921-0001 1 records
+ INFO 2020-09-23 19:12:58,195 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200917-0001 1 records
+ INFO 2020-09-23 19:12:58,225 (EsImporter.java:137) [EsImporter#7] - Imported 67 records OF 55070 --> 0.121663337570365%
+ INFO 2020-09-23 19:12:58,225 (EsImporter.java:93) [EsImporter#7] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,227 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200919-0001 4 records
+ INFO 2020-09-23 19:12:58,243 (EsImporter.java:137) [EsImporter#6] - Imported 77 records OF 55070 --> 0.13982204467041945%
+ INFO 2020-09-23 19:12:58,244 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,255 (EsImporter.java:137) [EsImporter#3] - Imported 78 records OF 55070 --> 0.14163791538042492%
+ INFO 2020-09-23 19:12:58,256 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,256 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200918-0001 54 records
+ INFO 2020-09-23 19:12:58,259 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200920-0001 21 records
+ INFO 2020-09-23 19:12:58,272 (EsImporter.java:137) [EsImporter#1] - Imported 82 records OF 55070 --> 0.1489013982204467%
+ INFO 2020-09-23 19:12:58,273 (EsImporter.java:93) [EsImporter#1] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,277 (EsImporter.java:137) [EsImporter#0] - Imported 218 records OF 55070 --> 0.39585981478118754%
+ INFO 2020-09-23 19:12:58,278 (EsImporter.java:93) [EsImporter#0] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,282 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200917-0001 51 records
+ INFO 2020-09-23 19:12:58,272 (EsImporter.java:137) [EsImporter#5] - Imported 217 records OF 55070 --> 0.39404394407118215%
+ INFO 2020-09-23 19:12:58,305 (EsImporter.java:93) [EsImporter#5] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,306 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200920-0001 1 records
+ INFO 2020-09-23 19:12:58,317 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200915-0001 195 records
+ INFO 2020-09-23 19:12:58,321 (EsImporter.java:137) [EsImporter#7] - Imported 222 records OF 55070 --> 0.4031232976212094%
+ INFO 2020-09-23 19:12:58,321 (EsImporter.java:93) [EsImporter#7] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,324 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200917-0001 13 records
+ INFO 2020-09-23 19:12:58,351 (EsImporter.java:137) [EsImporter#4] - Imported 242 records OF 55070 --> 0.43944071182131833%
+ INFO 2020-09-23 19:12:58,351 (EsImporter.java:93) [EsImporter#4] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,353 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200920-0001 1 records
+ INFO 2020-09-23 19:12:58,497 (EsImporter.java:137) [EsImporter#3] - Imported 263 records OF 55070 --> 0.4775739967314327%
+ INFO 2020-09-23 19:12:58,498 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,501 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200915-0001 20 records
+ INFO 2020-09-23 19:12:58,512 (EsImporter.java:137) [EsImporter#6] - Imported 317 records OF 55070 --> 0.5756310150717269%
+ INFO 2020-09-23 19:12:58,513 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,514 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200915-0001 1 records
+ INFO 2020-09-23 19:12:58,533 (EsImporter.java:137) [EsImporter#5] - Imported 318 records OF 55070 --> 0.5774468857817324%
+ INFO 2020-09-23 19:12:58,533 (EsImporter.java:93) [EsImporter#5] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,571 (EsImporter.java:137) [EsImporter#4] - Imported 319 records OF 55070 --> 0.5792627564917378%
+ INFO 2020-09-23 19:12:58,572 (EsImporter.java:93) [EsImporter#4] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,581 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200918-0001 80 records
+ INFO 2020-09-23 19:12:58,633 (EsImporter.java:137) [EsImporter#7] - Imported 332 records OF 55070 --> 0.6028690757218086%
+ INFO 2020-09-23 19:12:58,634 (EsImporter.java:93) [EsImporter#7] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,638 (EsImporter.java:137) [EsImporter#0] - Imported 383 records OF 55070 --> 0.6954784819320864%
+ INFO 2020-09-23 19:12:58,639 (EsImporter.java:93) [EsImporter#0] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,664 (EsImporter.java:137) [EsImporter#6] - Imported 384 records OF 55070 --> 0.6972943526420918%
+ INFO 2020-09-23 19:12:58,664 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,765 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200918-0001 819 records
+ INFO 2020-09-23 19:12:58,810 (EsImporter.java:137) [EsImporter#3] - Imported 404 records OF 55070 --> 0.7336117668422009%
+ INFO 2020-09-23 19:12:58,811 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:12:58,813 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200908-0001 299 records
+ INFO 2020-09-23 19:12:58,814 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200908-0001 39 records
+ INFO 2020-09-23 19:12:58,820 (EsImporter.java:137) [EsImporter#2] - Imported 524 records OF 55070 --> 0.9515162520428545%
+ INFO 2020-09-23 19:12:58,820 (EsImporter.java:93) [EsImporter#2] - Import took 0 seconds
+ INFO 2020-09-23 19:12:59,068 (EsImporter.java:137) [EsImporter#4] - Imported 604 records OF 55070 --> 1.0967859088432903%
+ INFO 2020-09-23 19:12:59,069 (EsImporter.java:93) [EsImporter#4] - Import took 0 seconds
+ INFO 2020-09-23 19:12:59,070 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200921-0001 5 records
+ INFO 2020-09-23 19:12:59,160 (EsImporter.java:133) [EsImporter#0] - BULK ADD to fm_history_20200918-0001 1220 records
+ INFO 2020-09-23 19:12:59,354 (EsImporter.java:137) [EsImporter#4] - Imported 609 records OF 55070 --> 1.1058652623933176%
+ INFO 2020-09-23 19:12:59,354 (EsImporter.java:93) [EsImporter#4] - Import took 0 seconds
+ INFO 2020-09-23 19:12:59,358 (EsImporter.java:137) [EsImporter#3] - Imported 648 records OF 55070 --> 1.1766842200835301%
+ INFO 2020-09-23 19:12:59,358 (EsImporter.java:93) [EsImporter#3] - Import took 0 seconds
+ INFO 2020-09-23 19:12:59,391 (EsImporter.java:133) [EsImporter#7] - BULK ADD to fm_history_20200908-0001 2736 records
+ INFO 2020-09-23 19:12:59,445 (EsImporter.java:133) [EsImporter#4] - BULK ADD to fm_history_20200921-0001 962 records
+ INFO 2020-09-23 19:12:59,548 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:12:59,970 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:00,177 (EsImporter.java:133) [EsImporter#3] - BULK ADD to fm_history_20200921-0001 2872 records
+ INFO 2020-09-23 19:13:00,321 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:00,380 (EsImporter.java:133) [EsImporter#2] - BULK ADD to fm_history_20200921-0001 6580 records
+ INFO 2020-09-23 19:13:00,605 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:00,612 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:00,612 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:00,616 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:00,670 (EsImporter.java:137) [EsImporter#1] - Imported 843 records OF 55070 --> 1.5307790085345923%
+ INFO 2020-09-23 19:13:00,670 (EsImporter.java:93) [EsImporter#1] - Import took 2 seconds
+ INFO 2020-09-23 19:13:00,870 (EsImporter.java:133) [EsImporter#1] - BULK ADD to fm_history_20200921-0001 1865 records
+ INFO 2020-09-23 19:13:00,919 (EsImporter.java:137) [EsImporter#6] - Imported 1142 records OF 55070 --> 2.0737243508262213%
+ INFO 2020-09-23 19:13:00,919 (EsImporter.java:93) [EsImporter#6] - Import took 2 seconds
+ INFO 2020-09-23 19:13:00,920 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200921-0001 2 records
+ INFO 2020-09-23 19:13:01,050 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:01,146 (EsImporter.java:137) [EsImporter#6] - Imported 1144 records OF 55070 --> 2.077356092246232%
+ INFO 2020-09-23 19:13:01,146 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:13:01,147 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200921-0001 1 records
+ INFO 2020-09-23 19:13:01,255 (EsImporter.java:137) [EsImporter#6] - Imported 1145 records OF 55070 --> 2.0791719629562375%
+ INFO 2020-09-23 19:13:01,255 (EsImporter.java:93) [EsImporter#6] - Import took 0 seconds
+ INFO 2020-09-23 19:13:03,156 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,193 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,331 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,608 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,613 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,635 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,636 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:03,892 (EsImporter.java:137) [EsImporter#5] - Imported 1964 records OF 55070 --> 3.566370074450699%
+ INFO 2020-09-23 19:13:03,892 (EsImporter.java:93) [EsImporter#5] - Import took 5 seconds
+ INFO 2020-09-23 19:13:04,051 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:04,956 (EsImporter.java:137) [EsImporter#0] - Imported 3184 records OF 55070 --> 5.781732340657345%
+ INFO 2020-09-23 19:13:04,963 (EsImporter.java:93) [EsImporter#0] - Import took 6 seconds
+ INFO 2020-09-23 19:13:04,964 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:05,071 (EsImporter.java:133) [EsImporter#6] - BULK ADD to fm_history_20200903-0001 17056 records
+ INFO 2020-09-23 19:13:05,282 (EsImporter.java:137) [EsImporter#4] - Imported 4146 records OF 55070 --> 7.528599963682586%
+ INFO 2020-09-23 19:13:05,283 (EsImporter.java:93) [EsImporter#4] - Import took 5 seconds
+ INFO 2020-09-23 19:13:05,283 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:06,162 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:06,239 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:06,332 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:06,619 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:06,623 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:06,636 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:06,638 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:08,581 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:08,581 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:08,616 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:08,661 (EsImporter.java:137) [EsImporter#7] - Imported 6882 records OF 55070 --> 12.49682222625749%
+ INFO 2020-09-23 19:13:08,663 (EsImporter.java:93) [EsImporter#7] - Import took 10 seconds
+ INFO 2020-09-23 19:13:08,663 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:09,164 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,241 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,333 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,353 (EsImporter.java:133) [EsImporter#5] - BULK ADD to fm_history_20200918-0001 19815 records
+ INFO 2020-09-23 19:13:09,625 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,625 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,637 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,639 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:09,894 (EsImporter.java:137) [EsImporter#1] - Imported 8747 records OF 55070 --> 15.88342110041765%
+ INFO 2020-09-23 19:13:09,895 (EsImporter.java:93) [EsImporter#1] - Import took 9 seconds
+ INFO 2020-09-23 19:13:09,895 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:10,945 (EsImporter.java:137) [EsImporter#3] - Imported 11619 records OF 55070 --> 21.0986017795533%
+ INFO 2020-09-23 19:13:10,960 (EsImporter.java:93) [EsImporter#3] - Import took 11 seconds
+ INFO 2020-09-23 19:13:10,961 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:11,583 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:11,586 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:11,619 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:11,667 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:12,164 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,243 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,336 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,625 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,626 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,639 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,640 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:12,896 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:12,985 (EsImporter.java:137) [EsImporter#2] - Imported 18199 records OF 55070 --> 33.04703105138914%
+ INFO 2020-09-23 19:13:12,988 (EsImporter.java:93) [EsImporter#2] - Import took 14 seconds
+ INFO 2020-09-23 19:13:12,988 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:13,961 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:14,585 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:14,587 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:14,620 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:14,668 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:15,165 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,244 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,336 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,626 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,626 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,639 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,641 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:15,897 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:15,988 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:16,863 (EsImporter.java:137) [EsImporter#6] - Imported 35255 records OF 55070 --> 64.01852188124205%
+ INFO 2020-09-23 19:13:16,869 (EsImporter.java:93) [EsImporter#6] - Import took 15 seconds
+ INFO 2020-09-23 19:13:16,869 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:16,962 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:17,585 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:17,587 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:17,621 (Monitor.java:317) [SolrExporter#1] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:17,668 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:18,167 (Monitor.java:317) [SolrExporter#2] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,245 (Monitor.java:317) [SolrExporter#4] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,337 (Monitor.java:317) [SolrExporter#6] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,627 (Monitor.java:317) [SolrExporter#5] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,628 (Monitor.java:317) [SolrExporter#3] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,640 (Monitor.java:317) [SolrExporter#0] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,641 (Monitor.java:317) [SolrExporter#7] - Waiting for /ericsson/postgres/migration/exported to become empty
+ INFO 2020-09-23 19:13:18,898 (EsImporter.java:57) [EsImporter#1] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:18,989 (EsImporter.java:57) [EsImporter#2] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:19,680 (EsImporter.java:137) [EsImporter#5] - Imported 55070 records OF 55070 --> 100.0%
+ INFO 2020-09-23 19:13:19,681 (EsImporter.java:93) [EsImporter#5] - Import took 15 seconds
+ INFO 2020-09-23 19:13:19,681 (EsImporter.java:57) [EsImporter#5] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:19,873 (EsImporter.java:57) [EsImporter#6] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:19,964 (EsImporter.java:57) [EsImporter#3] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:20,586 (EsImporter.java:57) [EsImporter#0] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:20,588 (EsImporter.java:57) [EsImporter#4] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:20,626 (Monitor.java:155) [SolrExporter#1] - failedTimeRanges is empty for thread 1
+ INFO 2020-09-23 19:13:20,672 (EsImporter.java:57) [EsImporter#7] - Waiting for 3 seconds for ES input files...
+ INFO 2020-09-23 19:13:21,168 (Monitor.java:155) [SolrExporter#2] - failedTimeRanges is empty for thread 2
+ INFO 2020-09-23 19:13:21,246 (Monitor.java:155) [SolrExporter#4] - failedTimeRanges is empty for thread 4
+ INFO 2020-09-23 19:13:21,338 (Monitor.java:155) [SolrExporter#6] - failedTimeRanges is empty for thread 6
+ INFO 2020-09-23 19:13:21,628 (Monitor.java:155) [SolrExporter#5] - failedTimeRanges is empty for thread 5
+ INFO 2020-09-23 19:13:21,628 (Monitor.java:155) [SolrExporter#3] - failedTimeRanges is empty for thread 3
+ INFO 2020-09-23 19:13:21,641 (Monitor.java:155) [SolrExporter#0] - failedTimeRanges is empty for thread 0
+ INFO 2020-09-23 19:13:21,642 (Monitor.java:155) [SolrExporter#7] - failedTimeRanges is empty for thread 7
+ INFO 2020-09-23 19:13:21,642 (Monitor.java:100) [SolrExporter#7] - Monitor Thread: Setting exporterAlive = false
+ INFO 2020-09-23 19:13:21,642 (Monitor.java:89) [SolrExporter#7] - Monitor Thread: Stopping...
+ INFO 2020-09-23 19:13:21,642 (Monitor.java:103) [SolrExporter#7] - Time ranges failed in retry: []
+ INFO 2020-09-23 19:13:21,904 (EsImporter.java:61) [EsImporter#1] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [1]
+ INFO 2020-09-23 19:13:21,990 (EsImporter.java:61) [EsImporter#2] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [2]
+ INFO 2020-09-23 19:13:22,683 (EsImporter.java:61) [EsImporter#5] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [5]
+ INFO 2020-09-23 19:13:22,874 (EsImporter.java:61) [EsImporter#6] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [6]
+ INFO 2020-09-23 19:13:22,968 (EsImporter.java:61) [EsImporter#3] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [3]
+ INFO 2020-09-23 19:13:23,589 (EsImporter.java:61) [EsImporter#0] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [0]
+ INFO 2020-09-23 19:13:23,590 (EsImporter.java:61) [EsImporter#4] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [4]
+ INFO 2020-09-23 19:13:23,677 (EsImporter.java:61) [EsImporter#7] - ES input file is not found to import and Exporter threads are not alive. Exiting Importer thread [7]
+ INFO 2020-09-23 19:13:23,678 (MigrateInTwoSteps.java:96) [main] - Total Migration took 33 seconds
+ INFO 2020-09-23 19:13:23,678 (MigrateInTwoSteps.java:98) [main] - To migrate record 55070 migrated record 55070 --> 0 SUCCESS %100.0
+ INFO 2020-09-23 19:13:33,809 (MigrateInTwoSteps.java:103) [main] - NUM of Document in ES 498845

@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Alarm Tester ...</title>
+<link rel="stylesheet" href="css/main.style.css" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/jquery.layout.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.ui.js"></script>
+<script type="text/javascript" src="js/jquery.layout.js"></script>
+<script type='text/javascript' src="js/console.js"></script>
+<script type='text/javascript' src="js/mainRest.js"></script>
+<script type='text/javascript' src="js/main.js"></script>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+	$(document).ready(function() {
+		documentReady();
+	});
+</script>
+</head>
+<body class="ui-layout-container">
+	<div class="ui-layout-north ui-layout-pane ui-layout-pane-north"
+		style="align: left">
+		<h1>Alarm Tester ...</h1>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">Base Alarm Flow</a></li>
+				<li><a href="#tabs-2">Peak Alarm Flow</a></li>
+				<li><a href="#tabs-3">Storm Alarm Flow</a></li>
+				<li><a href="#tabs-4">Read Alarm Flow</a></li>
+			</ul>
+			<div id="tabs-1">
+				<div>
+					<fieldset>
+						<legend class="title">Base Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="BaseAlarmFlowId">
+							<div style="display: inline-block;" id="AlarmThroughputId">
+								<div style="padding-bottom: 10px">
+									<label>Alarm Throughput (alarms/sec):</label> <input
+										id="ChangeNormalThroughputInput" type="number" min="1"
+										max="10000" value="30" />
+									<button id="ChangeNormalThroughput" type="button"
+										rest="rest/alarmTesting/changeNormalAlarmThroughput"
+										key="changeNormalThroughput"
+										onclick="onCommandAction(this,'AlarmThroughputId');">Change</button>
+								</div>
+								<div style="padding-top: 10px">
+									<label> <input type="checkbox"
+										name="ChangeNormalEnableCeasePercentageCheckbox"
+										id="ChangeNormalEnableCeasePercentageCheckbox"
+										rest="rest/alarmTesting/changeNormalEnableCeaseAlarmPercentage"
+										key="changeNormalEnableCeasePercentage"
+										onclick="onCommandAction(this,'AlarmCeasePercentageId');">
+										Enable Alarm Cease Percentage
+									</label>
+								</div>
+								<div>
+									<label>Alarm Cease Percentage (%):</label> <input
+										id="ChangeNormalCeasePercentageInput" type="number" min="1"
+										max="50" value="10" />
+									<button id="ChangeNormalCeasePercentage" type="button"
+										rest="rest/alarmTesting/changeNormalCeaseAlarmPercentage"
+										key="changeNormalCeasePercentage"
+										onclick="onCommandAction(this,'AlarmCeasePercentageId');">Change</button>
+								</div>
+							</div>
+							<p>
+								<button id="StartNormal" type="button"
+									rest="rest/alarmTesting/startNormalAlarmFlow"
+									key="startNormalFlow"
+									onclick="onCommandAction(this,'BaseAlarmFlowId');">Start</button>
+								<button id="StopNormal" type="button"
+									rest="rest/alarmTesting/stopNormalAlarmFlow"
+									key="stopNormalFlow"
+									onclick="onCommandAction(this,'BaseAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<legend class="title">Removing of Base Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="RemoveBaseAlarmFlowId">
+							<div style="display: block; padding: 10px"
+								id="RemoveBaseAlarmParallelId">
+								<label>Parallel Alarm Thread:</label> <input
+									id="ParallelAlarmNormalNumber" type="number" min="1" max="100"
+									value="20" />
+								<button id="ChangeParallelAlarmNormalNumber" type="button"
+									rest="rest/alarmTesting/changeParallelAlarmNormalNumber"
+									key="changeParallelAlarmNormalNumber"
+									onclick="onCommandAction(this,'RemoveBaseAlarmParallelId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemoveBaseAlarmPackingNumber">
+								<label>Packing Alarm Number:</label> <input
+									id="PackingAlarmNormalNumber" type="number" min="1" max="10000"
+									value="10" />
+								<button id="ChangePackingAlarmNormalNumber" type="button"
+									rest="rest/alarmTesting/changePackingAlarmNormalNumber"
+									key="changePackingAlarmNormalNumber"
+									onclick="onCommandAction(this,'RemoveBaseAlarmPackingNumber');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemoveBaseAlarmThresholdPercentageId">
+								<label>Threshold Alarm Percentage (%):</label> <input
+									id="ThresholdAlarmNormalPercentage" type="number" min="1"
+									max="50" value="30" />
+								<button id="ChangeThresholdAlarmNormalPercentage" type="button"
+									rest="rest/alarmTesting/changeThresholdAlarmNormalPercentage"
+									key="changeThresholdAlarmNormalPercentage"
+									onclick="onCommandAction(this,'RemoveBaseAlarmThresholdPercentageId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemoveBaseAlarmThresholdNumberId">
+								<label>Threshold Alarm Number:</label> <input
+									id="ThresholdAlarmNormalNumber" type="number" min="1"
+									max="200000" value="0" />
+								<button id="ChangeThresholdAlarmNormalNumber" type="button"
+									rest="rest/alarmTesting/changeThresholdAlarmNormalNumber"
+									key="changeThresholdAlarmNormalNumber"
+									onclick="onCommandAction(this,'RemoveBaseAlarmThresholdNumberId');">Change</button>
+							</div>
+							<p>
+								<button id="StartRemoveNormal" type="button"
+									rest="rest/alarmTesting/startRemoveNormalAlarmFlow"
+									key="startRemoveNormalFlow"
+									onclick="onCommandAction(this,'RemoveBaseAlarmFlowId');">Start</button>
+								<button id="StopRemoveNormal" type="button"
+									rest="rest/alarmTesting/stopRemoveNormalAlarmFlow"
+									key="stopRemoveNormalFlow"
+									onclick="onCommandAction(this,'RemoveBaseAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<legend class="title">Removing of Base Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="RemoveAllNormalAlarmId">
+							<label>Remove All Base Alarms</label>
+						</div>
+						<p>
+							<button id="StartRemoveAllNormalAlarms" type="button"
+								rest="rest/alarmTesting/startRemoveAllNormalAlarmFlow"
+								key="startRemoveAllNormalAlarmFlow"
+								onclick="onCommandAction(this,'RemoveAllNormalAlarmId');">Start</button>
+							<button id="StopRemoveAllNormalAlarms" type="button"
+								rest="rest/alarmTesting/stopRemoveAllNormalAlarmFlow"
+								key="stopRemoveAllNormalAlarmFlow"
+								onclick="onCommandAction(this,'RemoveAllNormalAlarmId');">Stop</button>
+						</p>
+					</fieldset>
+				</div>
+			</div>
+			<div id="tabs-2">
+				<div>
+					<fieldset>
+						<legend class="title">Peak Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="PeakAlarmFlowId">
+							<div style="display: inline-block;" id="AlarmThroughputId">
+								<div style="padding-bottom: 10px">
+									<label>Alarm Throughput (alarms/sec):</label> <input
+										id="ChangePeakThroughputInput" type="number" min="1"
+										max="10000" value="50" />
+									<button id="ChangePeakThroughput" type="button"
+										rest="rest/alarmTesting/changePeakAlarmThroughput"
+										key="changePeakThroughput"
+										onclick="onCommandAction(this,'AlarmThroughputId');">Change</button>
+								</div>
+								<div style="padding-top: 10px">
+									<label> <input type="checkbox"
+										name="ChangePeakEnableCeasePercentageCheckbox"
+										id="ChangePeakEnableCeasePercentageCheckbox"
+										rest="rest/alarmTesting/changePeakEnableCeaseAlarmPercentage"
+										key="changePeakEnableCeasePercentage"
+										onclick="onCommandAction(this,'AlarmCeasePercentageId');">
+										Enable Alarm Cease Percentage
+									</label>
+								</div>
+								<div>
+									<label>Alarm Cease Percentage (%):</label> <input
+										id="ChangePeakCeasePercentageInput" type="number" min="1"
+										max="50" value="10" />
+									<button id="ChangePeakCeasePercentage" type="button"
+										rest="rest/alarmTesting/changePeakCeaseAlarmPercentage"
+										key="changePeakCeasePercentage"
+										onclick="onCommandAction(this,'AlarmCeasePercentageId');">Change</button>
+								</div>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="PeakAlarmRaisePeriodId">
+								<label>Raise Period (hours and minutes):</label> <input
+									id="ChangePeakOnPeriodInHourInput" type="number" min="0"
+									max="11" value="0" /> <input id="ChangePeakOnPeriodInMinInput"
+									type="number" min="1" max="59" value="15" />
+								<button id="ChangePeakOnPeriod" type="button"
+									rest="rest/alarmTesting/changePeakOnAlarmPeriod"
+									key="changePeakOnPeriod"
+									onclick="onCommandAction(this,'PeakAlarmRaisePeriodId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="PeakAlarmLowerPeriodId">
+								<label>Lower Period (hours and minutes):</label> <input
+									id="ChangePeakOffPeriodInHourInput" type="number" min="0"
+									max="11" value="0" /> <input
+									id="ChangePeakOffPeriodInMinInput" type="number" min="1"
+									max="59" value="15" />
+								<button id="ChangePeakOffPeriod" type="button"
+									rest="rest/alarmTesting/changePeakOffAlarmPeriod"
+									key="changePeakOffPeriod"
+									onclick="onCommandAction(this,'PeakAlarmLowerPeriodId');">Change</button>
+							</div>
+							<p>
+								<button id="StartPeak" type="button"
+									rest="rest/alarmTesting/startPeakAlarmFlow" key="startPeakFlow"
+									onclick="onCommandAction(this,'PeakAlarmFlowId');">Start</button>
+								<button id="StopPeak" type="button"
+									rest="rest/alarmTesting/stopPeakAlarmFlow" key="stopPeakFlow"
+									onclick="onCommandAction(this,'PeakAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<legend class="title">Removing of Peak Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="RemovePeakAlarmFlowId">
+							<div style="display: block; padding: 10px"
+								id="RemovePeakAlarmParallelId">
+								<label>Parallel Alarm Thread:</label> <input
+									id="ParallelAlarmPeakNumber" type="number" min="1" max="100"
+									value="20" />
+								<button id="ChangeParallelAlarmPeakNumber" type="button"
+									rest="rest/alarmTesting/changeParallelAlarmPeakNumber"
+									key="changeParallelAlarmPeakNumber"
+									onclick="onCommandAction(this,'RemovePeakAlarmParallelId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemovePeakAlarmPackingNumber">
+								<label>Packing Alarm Number:</label> <input
+									id="PackingAlarmPeakNumber" type="number" min="1" max="10000"
+									value="10" />
+								<button id="ChangePackingAlarmPeakNumber" type="button"
+									rest="rest/alarmTesting/changePackingAlarmPeakNumber"
+									key="changePackingAlarmPeakNumber"
+									onclick="onCommandAction(this,'RemovePeakAlarmPackingNumber');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemovePeakAlarmThresholdPercentageId">
+								<label>Threshold Alarm Percentage (%)</label> <input
+									id="ThresholdAlarmPeakPercentage" type="number" min="1"
+									max="50" value="30" />
+								<button id="ChangeThresholdAlarmPeakPercentage" type="button"
+									rest="rest/alarmTesting/changeThresholdAlarmPeakPercentage"
+									key="changeThresholdAlarmPeakPercentage"
+									onclick="onCommandAction(this,'RemovePeakAlarmThresholdPercentageId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemovePeakAlarmThresholdNumberId">
+								<label>Threshold Alarm Number:</label> <input
+									id="ThresholdAlarmPeakNumber" type="number" min="1"
+									max="200000" value="0" />
+								<button id="ChangeThresholdAlarmPeakNumber" type="button"
+									rest="rest/alarmTesting/changeThresholdAlarmPeakNumber"
+									key="changeThresholdAlarmPeakNumber"
+									onclick="onCommandAction(this,'RemovePeakAlarmThresholdNumberId');">Change</button>
+							</div>
+							<p>
+								<button id="StartRemovePeak" type="button"
+									rest="rest/alarmTesting/startRemovePeakAlarmFlow"
+									key="startRemovePeakFlow"
+									onclick="onCommandAction(this,'RemovePeakAlarmFlowId');">Start</button>
+								<button id="StopRemovePeak" type="button"
+									rest="rest/alarmTesting/stopRemovePeakAlarmFlow"
+									key="stopRemovePeakFlow"
+									onclick="onCommandAction(this,'RemovePeakAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<legend class="title">Remove All Peak Alarms Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="RemoveAllPeakAlarmId">
+							<label>Remove All Peak Alarms</label>
+						</div>
+						<p>
+							<button id="StartRemoveAllPeakAlarms" type="button"
+								rest="rest/alarmTesting/startRemoveAllPeakAlarmFlow"
+								key="startRemoveAllPeakAlarmFlow"
+								onclick="onCommandAction(this,'RemoveAllPeakAlarmId');">Start</button>
+							<button id="StopRemoveAllPeakAlarms" type="button"
+								rest="rest/alarmTesting/stopRemoveAllPeakAlarmFlow"
+								key="stopRemoveAllPeakAlarmFlow"
+								onclick="onCommandAction(this,'RemoveAllPeakAlarmId');">Stop</button>
+						</p>
+
+					</fieldset>
+				</div>
+			</div>
+			<div id="tabs-3">
+				<div>
+					<fieldset>
+						<legend class="title">Storm Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="StormAlarmFlowId">
+							<div style="display: inline-block;" id="AlarmThroughputId">
+								<div style="padding-bottom: 10px">
+									<label>Alarm Throughput (alarms/sec):</label> <input
+										id="ChangeStormThroughputInput" type="number" min="1"
+										max="10000" value="300" />
+									<button id="ChangeStormThroughput" type="button"
+										rest="rest/alarmTesting/changeStormAlarmThroughput"
+										key="changeStormThroughput"
+										onclick="onCommandAction(this,'AlarmThroughputId');">Change</button>
+								</div>
+								<div style="padding-top: 10px">
+									<label> <input type="checkbox"
+										name="ChangeStormEnableCeasePercentageCheckbox"
+										id="ChangeStormEnableCeasePercentageCheckbox"
+										rest="rest/alarmTesting/changeStormEnableCeaseAlarmPercentage"
+										key="changeStormEnableCeasePercentage"
+										onclick="onCommandAction(this,'AlarmCeasePercentageId');">
+										Enable Alarm Cease Percentage
+									</label>
+								</div>
+								<div>
+									<label>Alarm Cease Percentage (%):</label> <input
+										id="ChangeStormCeasePercentageInput" type="number" min="1"
+										max="50" value="10" />
+									<button id="ChangeStormCeasePercentage" type="button"
+										rest="rest/alarmTesting/changeStormCeaseAlarmPercentage"
+										key="changeStormCeasePercentage"
+										onclick="onCommandAction(this,'AlarmCeasePercentageId');">Change</button>
+								</div>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="StormAlarmRaisePeriodId">
+								<label>Raise Period (hours and minutes):</label> <input
+									id="ChangeStormOnPeriodInHourInput" type="number" min="0"
+									max="11" value="0" /> <input
+									id="ChangeStormOnPeriodInMinInput" type="number" min="1"
+									max="59" value="4" />
+								<button id="ChangeStormOnPeriod" type="button"
+									rest="rest/alarmTesting/changeStormOnAlarmPeriod"
+									key="changeStormOnPeriod"
+									onclick="onCommandAction(this,'StormAlarmRaisePeriodId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="StormAlarmLowerPeriodId">
+								<label>Lower Period (hours and minutes):</label> <input
+									id="ChangeStormOffPeriodInHourInput" type="number" min="0"
+									max="11" value="2" /> <input
+									id="ChangeStormOffPeriodInMinInput" type="number" min="1"
+									max="59" value="56" />
+								<button id="ChangeStormOffPeriod" type="button"
+									rest="rest/alarmTesting/changeStormOffAlarmPeriod"
+									key="changeStormOffPeriod"
+									onclick="onCommandAction(this,'StormAlarmLowerPeriodId');">Change</button>
+							</div>
+							<p>
+								<button id="StartStorm" type="button"
+									rest="rest/alarmTesting/startStormAlarmFlow"
+									key="startStormFlow"
+									onclick="onCommandAction(this,'StormAlarmFlowId');">Start</button>
+								<button id="StopStorm" type="button"
+									rest="rest/alarmTesting/stopStormAlarmFlow" key="stopStormFlow"
+									onclick="onCommandAction(this,'StormAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<legend class="title">Removing of Storm Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="RemoveStormAlarmFlowId">
+							<div style="display: block; padding: 10px"
+								id="RemoveStormAlarmParallelId">
+								<label>Parallel Alarm Thread:</label> <input
+									id="ParallelAlarmStormNumber" type="number" min="1" max="100"
+									value="20" />
+								<button id="ChangeParallelAlarmStormNumber" type="button"
+									rest="rest/alarmTesting/changeParallelAlarmStormNumber"
+									key="changeParallelAlarmStormNumber"
+									onclick="onCommandAction(this,'RemoveStormAlarmParallelId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemoveStormAlarmPackingNumber">
+								<label>Packing Alarm Number:</label> <input
+									id="PackingAlarmStormNumber" type="number" min="1" max="10000"
+									value="10" />
+								<button id="ChangePackingAlarmStormNumber" type="button"
+									rest="rest/alarmTesting/changePackingAlarmStormNumber"
+									key="changePackingAlarmStormNumber"
+									onclick="onCommandAction(this,'RemoveStormAlarmPackingNumber');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemoveStormAlarmThresholdPercentageId">
+								<label>Threshold Alarm Percentage (%)</label> <input
+									id="ThresholdAlarmStormPercentage" type="number" min="1"
+									max="50" value="30" />
+								<button id="ChangeThresholdAlarmStormPercentage" type="button"
+									rest="rest/alarmTesting/changeThresholdAlarmStormPercentage"
+									key="changeThresholdAlarmStormPercentage"
+									onclick="onCommandAction(this,'RemoveStormAlarmThresholdPercentageId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px"
+								id="RemoveStormAlarmThresholdNumberId">
+								<label>Threshold Alarm Number:</label> <input
+									id="ThresholdAlarmStormNumber" type="number" min="1"
+									max="200000" value="0" />
+								<button id="ChangeThresholdAlarmStormNumber" type="button"
+									rest="rest/alarmTesting/changeThresholdAlarmStormNumber"
+									key="changeThresholdAlarmStormNumber"
+									onclick="onCommandAction(this,'RemoveStormAlarmThresholdNumberId');">Change</button>
+							</div>
+							<p>
+								<button id="StartRemoveStorm" type="button"
+									rest="rest/alarmTesting/startRemoveStormAlarmFlow"
+									key="startRemoveStormFlow"
+									onclick="onCommandAction(this,'RemoveStormAlarmFlowId');">Start</button>
+								<button id="StopRemoveStorm" type="button"
+									rest="rest/alarmTesting/stopRemoveStormAlarmFlow"
+									key="stopRemoveStormFlow"
+									onclick="onCommandAction(this,'RemoveStormAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+				<div>
+					<fieldset>
+						<legend class="title">Remove All Storm Alarms Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="RemoveAllStormAlarmId">
+							<label>Remove All Storm Alarms</label>
+						</div>
+						<p>
+							<button id="StartRemoveAllStormAlarms" type="button"
+								rest="rest/alarmTesting/startRemoveAllStormAlarmFlow"
+								key="startRemoveAllStormAlarmFlow"
+								onclick="onCommandAction(this,'RemoveAllStormAlarmId');">Start</button>
+							<button id="StopRemoveAllStormAlarms" type="button"
+								rest="rest/alarmTesting/stopRemoveAllStormAlarmFlow"
+								key="stopRemoveAllStormAlarmFlow"
+								onclick="onCommandAction(this,'RemoveAllStormAlarmId');">Stop</button>
+						</p>
+					</fieldset>
+				</div>
+			</div>
+
+			<div id="tabs-4">
+				<div>
+					<fieldset>
+						<legend class="title">Read Alarm Flow</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="ReadAlarmFlowId">
+							<div style="display: block; padding: 10px"
+								id="ReadParallelNumberId">
+								<label>Read Parallel Number :</label> <input
+									id="ChangeReadParallelNumberInput" type="number" min="1"
+									max="10000" value="10" />
+								<button id="ChangeReadParallelNumber" type="button"
+									rest="rest/alarmTesting/changeReadParallelNumber"
+									key="changeReadParallelNumber"
+									onclick="onCommandAction(this,'ReadParallelNumberId');">Change</button>
+							</div>
+							<div style="display: block; padding: 10px" id="ReadPauseNumberId">
+								<label>Read Pause Period (hours,minutes,seconds):</label> <input
+									id="ChangeReadPausePeriodInHourInput" type="number" min="0"
+									max="11" value="0" /> <input
+									id="ChangeReadPausePeriodInMinInput" type="number" min="0"
+									max="59" value="0" /><input
+									id="ChangeReadPausePeriodInSecInput" type="number" min="0"
+									max="59" value="0" />
+								<button id="ChangeReadPausePeriod" type="button"
+									rest="rest/alarmTesting/changeReadPausePeriod"
+									key="changeReadPausePeriod"
+									onclick="onCommandAction(this,'ReadPauseNumberId');">Change</button>
+							</div>
+							<p>
+								<button id="StartRead" type="button"
+									rest="rest/alarmTesting/startReadAlarmFlow"
+									key="startReadAlarmFlow"
+									onclick="onCommandAction(this,'ReadAlarmFlowId');">Start</button>
+								<button id="StopRead" type="button"
+									rest="rest/alarmTesting/stopReadAlarmFlow"
+									key="stopReadAlarmFlow"
+									onclick="onCommandAction(this,'ReadAlarmFlowId');">Stop</button>
+							</p>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+			<div id="tabs-5">
+				<div>
+					<fieldset>
+						<legend class="title">Alarm Flow Information</legend>
+						<div class="controlgroup" style="margin: 10px"
+							id="AlarmFlowInfoId">
+							<div style="display: block; padding: 10px"
+								id="CurrentAlarmNumberId">
+								<label>Number of current alarm :</label> 
+								<div id="CurrentAlarmNumberLabel" class="AlarmFlowInfoClass">No Value</div>
+								<button id="GetCurrentAlarmNumber" type="button"
+									rest="rest/alarmTesting/getCurrentAlarmNumber"
+									key="getCurrentAlarmNumber"
+									onclick="onCommandAction(this,'CurrentAlarmNumberId');">Get</button>
+								<button id="GetCurrentAlarmNumberTimerStart" type="button"
+									rest="rest/alarmTesting/getCurrentAlarmNumber"
+									key="getCurrentAlarmNumberTimerStart"
+									onclick="onCommandAction(this,'CurrentAlarmNumberId');">Start Timer</button>
+								<button id="GetCurrentAlarmNumberTimerStop" type="button"
+									rest="rest/alarmTesting/getCurrentAlarmNumber"
+									key="getCurrentAlarmNumberTimerStop"
+									onclick="onCommandAction(this,'CurrentAlarmNumberId');">Stop Timer</button>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div
+		class="logContainer ui-layout-center ui-layout-pane ui-layout-pane-center ui-layout-pane-hover ui-layout-pane-center-hover ui-layout-pane-open-hover ui-layout-pane-center-open-hover">
+		<div id="log"></div>
+	</div>
+</body>
+</html>

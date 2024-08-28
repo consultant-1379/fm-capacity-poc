@@ -1,0 +1,46 @@
+version: "3"
+services:
+    elasticsearch:
+        image: elasticsearch:6.8.12
+        container_name: elasticsearch
+        hostname: elasticsearch
+        environment:
+            - "discovery.type=single-node"
+            - "ES_JAVA_OPTS=-Xms8g -Xmx8g"
+        ports:
+            - 9200:9200
+            - 9300:9300
+        networks:
+            - elknetwork
+    kibana:
+        image: kibana:6.8.12
+        container_name: kibana
+        hostname: kibana
+        ports:
+            - 5601:5601
+        links:
+            - elasticsearch:elasticsearch
+        depends_on:
+          - elasticsearch
+        networks:
+          - elknetwork
+    logstash:
+        image: logstash:6.8.12
+        command: tail -F anything
+        container_name: logstash
+        hostname: logstash
+        ports:
+            - 9600:9600
+            - 8089:8089
+        volumes:
+          - .logstash:/usr/share/logstash/pipeline/
+          - /tmp/migration/test/:/tmp/migration/test/
+        links:
+            - elasticsearch:elasticsearch
+        depends_on:
+          - elasticsearch
+        networks:
+          - elknetwork
+networks:
+    elknetwork:
+        driver: bridge

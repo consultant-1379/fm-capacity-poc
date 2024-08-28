@@ -1,0 +1,32 @@
+networks: {}
+services:
+  dps_integration:
+    container_name: dps_integration_poc
+    build: ./docker/dps-integration
+    #image: armdocker.rnd.ericsson.se/proj_oss_releases/enm/dps-integration-base
+    volumes:
+    - /etc/opt/ericsson/ERICmodeldeployment/data
+    - /etc/opt/ericsson/ERICmodeldeployment/models
+    - /opt/ericsson/ERICdpsupgrade/egt/output
+    #- ./src/test/docker/dps_integration/config:/opt/ericsson/docker/config
+  jboss:
+    image: armdocker.rnd.ericsson.se/proj_oss_releases/enm/jboss-dps
+    command: "-s jboss"
+    environment:
+    - RUNNING_ENV=$DOCKER_RUNNING_ENV    
+    links:
+    - postgres:postgresql-server
+    - dps_integration:db1-service
+    ports:
+    - 9999:9999
+    - 9990:9990
+    - 8080:8080
+    - 8787:8787
+    volumes:
+    - ./src/test/docker/jboss/config:/opt/ericsson/docker/config
+    volumes_from:
+    - dps_integration
+  postgres:
+    image: armdocker.rnd.ericsson.se/proj_oss_releases/enm/postgres
+version: '2.0'
+volumes: {}
